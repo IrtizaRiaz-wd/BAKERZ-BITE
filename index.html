@@ -1,0 +1,1297 @@
+﻿<!doctype html>
+
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bakerz Bite - Pastel Candy Bakery</title>
+    <meta name="description" content="Artisan bakery and cafe featuring a playful 3D clay aesthetic, custom celebration cake studio, stone hearth sourdough, and fresh daily delivery." />
+    <meta property="og:title" content="Bakerz Bite - Pastel Candy Bakery" />
+    <meta property="og:description" content="Artisan bakery and cafe featuring a playful 3D clay aesthetic, custom celebration cake studio, stone hearth sourdough, and fresh daily delivery." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    
+    <!-- Dedicated Favicon -->
+    <link rel="icon" type="image/png" href="assets/images/favicon.png" />
+    <link rel="shortcut icon" href="favicon.ico" />
+
+    <!-- Google Fonts: Fredoka, Baloo 2, Nunito -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- Custom Bakery Stylesheets -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/pages.css">
+    <link rel="stylesheet" href="css/responsive.css">
+  </head>
+  <body>
+    <!-- Reading Progress Bar -->
+    <div id="readingProgressBar"></div>
+
+    <!-- SECTION 01: ANNOUNCEMENT BAR & STORE METRICS -->
+    <div class="announcement-bar">
+      <div class="container-custom d-flex flex-wrap align-items-center justify-content-between gap-2">
+        <div class="ticker-item">
+          <span class="badge bg-danger text-white rounded-pill px-2 py-1 small">FRESH</span>
+          <span>Freshly baked every morning! Free delivery on orders over Rs. 1,500 🍓</span>
+        </div>
+        <div class="d-flex align-items-center gap-3">
+          <div class="announcement-meta-badge d-none d-md-inline-flex align-items-center gap-1">
+            <i class="bi bi-clock-history text-danger"></i>
+            <span class="dynamic-live-clock">Loading live clock...</span>
+          </div>
+          <div class="announcement-meta-badge d-none d-lg-inline-flex align-items-center gap-1">
+            <i class="bi bi-geo-alt-fill text-danger"></i>
+            <span class="bakery-location-display">Main Boulevard, North Nazimabad, Karachi</span>
+          </div>
+          <div class="announcement-meta-badge d-inline-flex align-items-center gap-1">
+            <i class="bi bi-basket2-fill text-danger"></i>
+            <span>Fresh batches baked daily · Open 8:00 AM – 11:30 PM</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SECTION 02: STICKY NAVIGATION BAR -->
+    <header class="bakerz-navbar">
+      <div class="container-custom d-flex align-items-center justify-content-between">
+        
+        <!-- Brand Logo -->
+        <a href="index.html" class="navbar-brand-logo" aria-label="Bakerz Bite Homepage">
+          <img src="assets/images/bakerz-bite-logo.webp" alt="Bakerz Bite Bakery Logo" height="52" />
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <nav class="d-none d-xl-flex align-items-center gap-1 navbar-nav-desktop">
+          <a href="index.html" class="nav-link-bb active">Home</a>
+          
+          <!-- Explore Menu with Mega Dropdown -->
+          <div class="mega-menu-wrapper">
+            <a href="menu.html" class="nav-link-bb d-flex align-items-center gap-1">
+              Explore Menu <i class="bi bi-chevron-down small"></i>
+            </a>
+            <div class="mega-dropdown-menu">
+              <div class="mega-grid">
+                <!-- 1. Breads -->
+                <a href="menu.html?category=breads" class="mega-card bg-bread">
+                  <div class="mega-card-img position-relative overflow-hidden">
+                    <img loading="lazy" decoding="async" src="assets/images/categories/thumbs/category-breads.webp" alt="Breads & Loaves" onerror="this.style.display='none'; if (this.nextElementSibling) this.nextElementSibling.style.display='flex';" />
+                    <span style="display: none; width: 100%; height: 100%; align-items: center; justify-content: center; font-size: 1.8rem;">🍞</span>
+                  </div>
+                  <div class="mega-card-body">
+                    <h6 class="brand-font mb-1 text-dark">Breads & Loaves</h6>
+                    <p class="mb-0">Sourdough, rustic baguettes & wheat.</p>
+                  </div>
+                </a>
+
+                <!-- 2. Cakes -->
+                <a href="menu.html?category=cakes" class="mega-card bg-cake">
+                  <div class="mega-card-img position-relative overflow-hidden">
+                    <img loading="lazy" decoding="async" src="assets/images/categories/thumbs/category-cakes.webp" alt="Cakes & Gateaux" onerror="this.style.display='none'; if (this.nextElementSibling) this.nextElementSibling.style.display='flex';" />
+                    <span style="display: none; width: 100%; height: 100%; align-items: center; justify-content: center; font-size: 1.8rem;">🎂</span>
+                  </div>
+                  <div class="mega-card-body">
+                    <h6 class="brand-font mb-1 text-dark">Cakes & Gateaux</h6>
+                    <p class="mb-0">Fudge, fresh cream & celebration cakes.</p>
+                  </div>
+                </a>
+
+                <!-- 3. Pastries -->
+                <a href="menu.html?category=pastries" class="mega-card bg-pastry">
+                  <div class="mega-card-img position-relative overflow-hidden">
+                    <img loading="lazy" decoding="async" src="assets/images/categories/thumbs/category-pastries.webp" alt="Pastries & Sweets" onerror="this.style.display='none'; if (this.nextElementSibling) this.nextElementSibling.style.display='flex';" />
+                    <span style="display: none; width: 100%; height: 100%; align-items: center; justify-content: center; font-size: 1.8rem;">🥐</span>
+                  </div>
+                  <div class="mega-card-body">
+                    <h6 class="brand-font mb-1 text-dark">Pastries & Sweets</h6>
+                    <p class="mb-0">27-layer croissants, tarts & rolls.</p>
+                  </div>
+                </a>
+
+                <!-- 4. Savory -->
+                <a href="menu.html?category=savory" class="mega-card bg-savory">
+                  <div class="mega-card-img position-relative overflow-hidden">
+                    <img loading="lazy" decoding="async" src="assets/images/categories/thumbs/category-savory.webp" alt="Savory & Snacks" onerror="this.style.display='none'; if (this.nextElementSibling) this.nextElementSibling.style.display='flex';" />
+                    <span style="display: none; width: 100%; height: 100%; align-items: center; justify-content: center; font-size: 1.8rem;">🥟</span>
+                  </div>
+                  <div class="mega-card-body">
+                    <h6 class="brand-font mb-1 text-dark">Savory & Snacks</h6>
+                    <p class="mb-0">Chicken patties, puffs & garlic twists.</p>
+                  </div>
+                </a>
+
+                <!-- 5. Essentials -->
+                <a href="menu.html?category=essentials" class="mega-card bg-essential">
+                  <div class="mega-card-img position-relative overflow-hidden">
+                    <img loading="lazy" decoding="async" src="assets/images/categories/thumbs/category-essentials.webp" alt="Everyday Essentials" onerror="this.style.display='none'; if (this.nextElementSibling) this.nextElementSibling.style.display='flex';" />
+                    <span style="display: none; width: 100%; height: 100%; align-items: center; justify-content: center; font-size: 1.8rem;">🧇</span>
+                  </div>
+                  <div class="mega-card-body">
+                    <h6 class="brand-font mb-1 text-dark">Everyday Essentials</h6>
+                    <p class="mb-0">Tea rusks, burger buns & dinner rolls.</p>
+                  </div>
+                </a>
+
+                <!-- 6. Complete Menu Highlights -->
+                <a href="menu.html" class="mega-card mega-card-highlight">
+                  <div class="mega-card-body">
+                    <div class="d-flex align-items-center gap-1 text-danger small fw-bold mb-1">
+                      <i class="bi bi-stars"></i>
+                      <span data-product-count>All 51 Baked Delights</span>
+                    </div>
+                    <h6 class="brand-font mb-1 text-dark">Full Artisan Menu</h6>
+                    <p class="mb-0 text-danger fw-semibold">Browse full catalog →</p>
+                  </div>
+                </a>
+              </div>
+              
+              <div class="mt-3 pt-2 border-top d-flex justify-content-between align-items-center">
+                <span class="small text-muted"><i class="bi bi-clock-history me-1 text-danger"></i>Fresh stone hearth batches baked daily with unbleached flours.</span>
+                <a href="menu.html" class="small fw-bold text-danger text-decoration-none">Explore All Items →</a>
+              </div>
+            </div>
+          </div>
+
+          <a href="about.html" class="nav-link-bb">About Us</a>
+          <a href="cake-studio.html" class="nav-link-bb">Cake Studio</a>
+          <a href="gallery.html" class="nav-link-bb">Gallery</a>
+          <a href="offers.html" class="nav-link-bb">Offers</a>
+          <a href="contact.html" class="nav-link-bb">Contact</a>
+        </nav>
+
+        <!-- Right Side Action Icons & Order Button -->
+        <div class="d-flex align-items-center gap-2">
+          <!-- Search Button -->
+          <button class="nav-action-btn" aria-label="Open Search" onclick="BakerzSearch.open()">
+            <i class="bi bi-search"></i>
+          </button>
+
+          <!-- Account Link -->
+          <a href="login.html" class="nav-action-btn" aria-label="Account Login or Dashboard">
+            <i class="bi bi-person"></i>
+          </a>
+
+          <!-- Wishlist Button -->
+          <a href="dashboard.html#wishlist" class="nav-action-btn position-relative" aria-label="View Saved Wishlist">
+            <i class="bi bi-heart"></i>
+            <span class="badge-pill-count wishlist-count-badge" style="display: none;">0</span>
+          </a>
+
+          <!-- Cart Drawer Button -->
+          <button class="nav-action-btn position-relative cart-drawer-trigger" aria-label="Open Cart Drawer">
+            <i class="bi bi-basket3"></i>
+            <span class="badge-pill-count cart-count-badge" style="display: none;">0</span>
+          </button>
+
+          <!-- Order Now CTA Button -->
+          <a href="menu.html" class="btn btn-bb btn-bb-primary btn-bb-sm d-none d-sm-inline-flex">
+            Order Now
+          </a>
+
+          <!-- Mobile Hamburger Toggle -->
+          <button class="btn btn-bb btn-bb-outline btn-bb-sm d-xl-none ms-1" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileNavOffcanvas" aria-controls="mobileNavOffcanvas" aria-label="Toggle navigation">
+            <i class="bi bi-list fs-5"></i>
+          </button>
+        </div>
+
+      </div>
+    </header>
+
+    <!-- MOBILE OFFCANVAS NAVIGATION -->
+    <div class="offcanvas offcanvas-end mobile-nav-offcanvas" tabindex="-1" id="mobileNavOffcanvas" aria-labelledby="mobileNavLabel">
+      <div class="mobile-nav-header d-flex justify-content-between align-items-center">
+        <img loading="lazy" decoding="async" src="assets/images/bakerz-bite-logo.webp" alt="Bakerz Bite" height="38" />
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body p-3">
+        <div class="d-flex flex-column gap-1 mb-4">
+          <a href="index.html" class="mobile-nav-link active"><span>Home</span> <i class="bi bi-house"></i></a>
+          <a href="menu.html" class="mobile-nav-link"><span>Explore Menu</span> <i class="bi bi-grid"></i></a>
+          <a href="about.html" class="mobile-nav-link"><span>About Us</span> <i class="bi bi-heart"></i></a>
+          <a href="cake-studio.html" class="mobile-nav-link" data-bs-dismiss="offcanvas"><span>Cake Studio</span> <i class="bi bi-stars"></i></a>
+          <a href="gallery.html" class="mobile-nav-link"><span>Sweet Gallery</span> <i class="bi bi-images"></i></a>
+          <a href="offers.html" class="mobile-nav-link"><span>Offers & Bundles</span> <i class="bi bi-tag"></i></a>
+          <a href="contact.html" class="mobile-nav-link"><span>Contact Us</span> <i class="bi bi-envelope"></i></a>
+          <a href="dashboard.html" class="mobile-nav-link"><span>My Dashboard</span> <i class="bi bi-person-circle"></i></a>
+          <a href="cart.html" class="mobile-nav-link"><span>Cart & Checkout</span> <i class="bi bi-basket3"></i></a>
+          <a href="faq.html" class="mobile-nav-link"><span>FAQs</span> <i class="bi bi-question-circle"></i></a>
+          <a href="admin-demo.html" class="mobile-nav-link text-muted small"><span>Admin Demo</span> <i class="bi bi-shield-lock"></i></a>
+        </div>
+        <div class="d-grid gap-2">
+          <a href="menu.html" class="btn btn-bb btn-bb-primary">
+            Browse Bakery Menu
+          </a>
+          <button class="btn btn-bb btn-bb-yellow cart-drawer-trigger" data-bs-dismiss="offcanvas">
+            View Basket
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- MAIN HOMEPAGE SECTIONS -->
+    <main>
+      
+      <!-- SECTION 03: HERO SECTION -->
+      <section class="bb-hero py-5 position-relative overflow-hidden" style="background: radial-gradient(circle at 80% 20%, #FDEBF2 0%, var(--bb-cream) 70%);">
+        <!-- Decorative responsive background video (hero only) -->
+        <div class="bb-bg-video" aria-hidden="true">
+          <video class="bb-bg-video__media bb-bg-video__media--desktop" muted loop playsinline preload="none" tabindex="-1" poster="assets/images/hero/bg-poster-desktop.jpg">
+            <source src="assets/videos/bakery-bg-desktop.mp4" type="video/mp4" />
+          </video>
+          <video class="bb-bg-video__media bb-bg-video__media--mobile" muted loop playsinline preload="none" tabindex="-1" poster="assets/images/hero/bg-poster-mobile.jpg">
+            <source src="assets/videos/bakery-bg-mobile.mp4" type="video/mp4" />
+          </video>
+          <div class="bb-bg-video__veil"></div>
+        </div>
+        <div class="container-custom">
+          <div class="row align-items-center g-5">
+            <!-- Left Hero Text Column -->
+            <div class="col-lg-6">
+              <div class="d-inline-flex align-items-center gap-2 px-3 py-1 bg-white rounded-pill border shadow-sm mb-3">
+                <span class="text-danger">✨</span>
+                <span class="small fw-bold text-uppercase tracking-wider" style="color: var(--bb-chocolate-brown);">MADE FRESH, MADE HAPPY</span>
+              </div>
+              <h1 class="display-3 fw-bold hero-title-main mb-3" style="color: var(--bb-chocolate-dark); line-height: 1.12;">
+                Sweet Moments. <br><span style="color: var(--bb-cherry-red);">Happy Bites.</span>
+              </h1>
+              <p class="lead mb-4 text-muted" style="max-width: 500px; font-size: 1.15rem;">
+                From freshly baked breads to irresistible cakes and delicious little treats, discover something to make every single moment sweeter.
+              </p>
+              
+              <div class="d-flex flex-wrap align-items-center gap-3 mb-4">
+                <a href="#complete-menu" class="btn btn-bb btn-bb-primary">
+                  <i class="bi bi-basket3-fill"></i> Explore Our Menu
+                </a>
+                <a href="about.html" class="btn btn-bb btn-bb-outline">
+                  Discover Our Story
+                </a>
+              </div>
+
+              <!-- Clay Stickers -->
+              <div class="d-flex flex-wrap gap-2 pt-2">
+                <span class="clay-sticker clay-sticker-pink anim-float">
+                  <span>🍓</span> Freshly Baked
+                </span>
+                <span class="clay-sticker clay-sticker-yellow anim-float-reverse">
+                  <span>💛</span> Made With Love
+                </span>
+                <span class="clay-sticker clay-sticker-green anim-float">
+                  <span>🌱</span> Pure Ingredients
+                </span>
+              </div>
+            </div>
+
+            <!-- Right Hero Visual 3D Dessert Showcase (Selling the Bakery Experience) -->
+            <div class="col-lg-6 position-relative text-center">
+              <div class="p-2 p-md-3 position-relative d-inline-block w-100" style="max-width: 540px;">
+                
+               
+
+                <!-- Dedicated Master Dessert Composition Artwork -->
+                <div class="clay-card p-2 p-sm-3 text-center position-relative overflow-hidden shadow-lg" style="background: linear-gradient(145deg, #FFFFFF 0%, #FFF5E6 100%); border-radius: var(--radius-xl); border: 3px solid rgba(255, 230, 238, 0.8);">
+                  
+                  <div class="position-relative overflow-hidden rounded-4 mb-3" style="height: 340px; background: #FFF9E6;">
+                    <img fetchpriority="high" decoding="async" src="assets/images/hero/hero-dessert-composition.webp" alt="Fresh artisan celebration cakes, crusty sourdough loaves, and pastries at Bakerz Bite" class="w-100 h-100" style="object-fit: cover;" onerror="this.src='assets/images/hero/hero-dessert-composition.jpg'" />
+                    <div class="position-absolute top-0 start-0 m-3">
+                      <span class="badge bg-danger text-white rounded-pill px-3 py-1 shadow-sm"><i class="bi bi-fire"></i> Fresh Out of Stone Hearth</span>
+                    </div>
+                    <div class="position-absolute bottom-0 end-0 m-3">
+                      <span class="badge bg-dark bg-opacity-75 text-white rounded-pill px-3 py-1 shadow-sm">36h Sourdough & Patisserie</span>
+                    </div>
+                  </div>
+                  
+                  <div class="d-flex justify-content-between align-items-center px-2">
+                    <div class="text-start">
+                      <h5 class="brand-font mb-0 text-dark">Artisan Patisserie & Daily Hearth</h5>
+                      <p class="small text-muted mb-0">Crafted with pure butter, wild yeast & fresh berry compotes.</p>
+                    </div>
+                    <a href="#complete-menu" class="btn btn-bb btn-bb-primary btn-bb-sm flex-shrink-0 ms-2">
+                      Taste Now
+                    </a>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <a href="#complete-menu" class="bb-scroll-cue d-none d-lg-inline-flex" aria-label="Scroll to the menu">
+          <span>Scroll to explore</span>
+          <i class="bi bi-chevron-double-down" aria-hidden="true"></i>
+        </a>
+      </section>
+
+      <!-- SECTION 04: HORIZONTAL DECORATIVE INFINITE MARQUEE -->
+      <section class="marquee-container" aria-hidden="true">
+        <div class="marquee-content">
+          <div class="marquee-item"><span>FRESHLY BAKED DAILY</span> <span class="separator">★</span></div>
+          <div class="marquee-item"><span>MADE WITH LOVE</span> <span class="separator">🍒</span></div>
+          <div class="marquee-item"><span>SWEETEN YOUR DAY</span> <span class="separator">★</span></div>
+          <div class="marquee-item"><span>EVERY BITE MATTERS</span> <span class="separator">🧁</span></div>
+          <div class="marquee-item"><span>HANDCRAFTED PASTRIES</span> <span class="separator">★</span></div>
+          <div class="marquee-item"><span>AUTHENTIC SOURDOUGH</span> <span class="separator">🥖</span></div>
+          <div class="marquee-item"><span>PURE BUTTER DELIGHTS</span> <span class="separator">★</span></div>
+          <div class="marquee-item"><span>FRESHLY BAKED DAILY</span> <span class="separator">★</span></div>
+          <div class="marquee-item"><span>MADE WITH LOVE</span> <span class="separator">🍒</span></div>
+          <div class="marquee-item"><span>SWEETEN YOUR DAY</span> <span class="separator">★</span></div>
+          <div class="marquee-item"><span>EVERY BITE MATTERS</span> <span class="separator">🧁</span></div>
+        </div>
+      </section>
+
+      <!-- SECTION 05: DISCOVER OUR CATEGORIES -->
+      <section class="py-5 bg-white">
+        <div class="container-custom">
+          <div class="text-center mb-5">
+            <span class="badge bg-pink text-dark rounded-pill px-3 py-1 mb-2">EXPLORE CATEGORIES</span>
+            <h2 class="display-5 fw-bold brand-font mb-2">Something Delicious for Everyone</h2>
+            <p class="text-muted" style="max-width: 600px; margin: 0 auto;">
+              Explore all the little and big delights coming fresh from our bakery hearth every morning.
+            </p>
+          </div>
+
+          <div class="row g-4 category-grid">
+            
+            <!-- Category 1: Cakes & Gateaux -->
+            <div class="col-md-6 col-lg-4">
+              <a href="menu.html?category=cakes" class="text-decoration-none">
+                <div class="category-card" style="background: var(--bb-strawberry-soft);">
+                  <div>
+                    <div class="category-artwork-container position-relative overflow-hidden mb-3 rounded-4" style="height: 160px; background: #FFF0F5;">
+                      <img loading="lazy" decoding="async" src="assets/images/categories/category-cakes-montage.webp" alt="Cakes & Gateaux" class="w-100 h-100" style="object-fit: cover; transition: transform 0.4s ease;" onerror="this.style.display='none'; if (this.nextElementSibling) this.nextElementSibling.style.display='flex';" />
+                      <div class="category-icon-box w-100 h-100" style="display: none; align-items: center; justify-content: center; font-size: 3rem;">🎂</div>
+                    </div>
+                    <h4 class="brand-font mb-2 text-dark">Artisan Cakes & Gateaux</h4>
+                    <p class="small text-muted mb-3">Chocolate fudge, red velvet, cheesecakes & strawberry shortcake.</p>
+                  </div>
+                  <span class="btn btn-bb btn-bb-pink btn-bb-sm w-100">Explore Cakes</span>
+                </div>
+              </a>
+            </div>
+
+            <!-- Category 2: Handcrafted Cookies -->
+            <div class="col-md-6 col-lg-4">
+              <a href="menu.html?category=cookies" class="text-decoration-none">
+                <div class="category-card" style="background: var(--bb-butter-soft);">
+                  <div>
+                    <div class="category-artwork-container position-relative overflow-hidden mb-3 rounded-4" style="height: 160px; background: #FFF9E6;">
+                      <img loading="lazy" decoding="async" src="assets/images/categories/category-cookies-montage.webp" alt="Handcrafted Cookies" class="w-100 h-100" style="object-fit: cover; transition: transform 0.4s ease;" onerror="this.style.display='none'; if (this.nextElementSibling) this.nextElementSibling.style.display='flex';" />
+                      <div class="category-icon-box w-100 h-100" style="display: none; align-items: center; justify-content: center; font-size: 3rem;">🍪</div>
+                    </div>
+                    <h4 class="brand-font mb-2 text-dark">Handcrafted Cookies</h4>
+                    <p class="small text-muted mb-3">Choco chip, double chocolate, pistachio, shortbread & salted caramel.</p>
+                  </div>
+                  <span class="btn btn-bb btn-bb-yellow btn-bb-sm w-100">Explore Cookies</span>
+                </div>
+              </a>
+            </div>
+
+            <!-- Category 3: Croissants & Viennoiserie -->
+            <div class="col-md-6 col-lg-4">
+              <a href="menu.html?category=pastries" class="text-decoration-none">
+                <div class="category-card" style="background: var(--bb-lavender-soft);">
+                  <div>
+                    <div class="category-artwork-container position-relative overflow-hidden mb-3 rounded-4" style="height: 160px; background: #F5F0FF;">
+                      <img loading="lazy" decoding="async" src="assets/images/categories/category-pastries-montage.webp" alt="Croissants & Viennoiserie" class="w-100 h-100" style="object-fit: cover; transition: transform 0.4s ease;" onerror="this.style.display='none'; if (this.nextElementSibling) this.nextElementSibling.style.display='flex';" />
+                      <div class="category-icon-box w-100 h-100" style="display: none; align-items: center; justify-content: center; font-size: 3rem;">🥐</div>
+                    </div>
+                    <h4 class="brand-font mb-2 text-dark">Croissants & Viennoiserie</h4>
+                    <p class="small text-muted mb-3">27-layer butter croissants, pains au chocolat, cruffins & éclairs.</p>
+                  </div>
+                  <span class="btn btn-bb btn-bb-outline btn-bb-sm w-100">Explore Pastries</span>
+                </div>
+              </a>
+            </div>
+
+            <!-- Category 4: Gourmet Pies & Tarts -->
+            <div class="col-md-6 col-lg-4">
+              <a href="menu.html?category=pies" class="text-decoration-none">
+                <div class="category-card" style="background: #FDF1EE;">
+                  <div>
+                    <div class="category-artwork-container position-relative overflow-hidden mb-3 rounded-4" style="height: 160px; background: #FFF4E5;">
+                      <img loading="lazy" decoding="async" src="assets/images/categories/category-pies-montage.webp" alt="Gourmet Pies & Tarts" class="w-100 h-100" style="object-fit: cover; transition: transform 0.4s ease;" onerror="this.style.display='none'; if (this.nextElementSibling) this.nextElementSibling.style.display='flex';" />
+                      <div class="category-icon-box w-100 h-100" style="display: none; align-items: center; justify-content: center; font-size: 3rem;">🥧</div>
+                    </div>
+                    <h4 class="brand-font mb-2 text-dark">Gourmet Pies & Tarts</h4>
+                    <p class="small text-muted mb-3">Classic lattice apple, blueberry, lemon meringue & pecan pies.</p>
+                  </div>
+                  <span class="btn btn-bb btn-bb-primary btn-bb-sm w-100">Explore Pies</span>
+                </div>
+              </a>
+            </div>
+
+            <!-- Category 5: Artisan Breads & Loaves -->
+            <div class="col-md-6 col-lg-4">
+              <a href="menu.html?category=breads" class="text-decoration-none">
+                <div class="category-card" style="background: var(--bb-butter-soft);">
+                  <div>
+                    <div class="category-artwork-container position-relative overflow-hidden mb-3 rounded-4" style="height: 160px; background: #FFF9E6;">
+                      <img loading="lazy" decoding="async" src="assets/images/categories/category-breads.webp" alt="Artisan Breads & Loaves" class="w-100 h-100" style="object-fit: cover; transition: transform 0.4s ease;" onerror="this.style.display='none'; if (this.nextElementSibling) this.nextElementSibling.style.display='flex';" />
+                      <div class="category-icon-box w-100 h-100" style="display: none; align-items: center; justify-content: center; font-size: 3rem;">🍞</div>
+                    </div>
+                    <h4 class="brand-font mb-2 text-dark">Breads & Loaves</h4>
+                    <p class="small text-muted mb-3">White, whole wheat, Parisian baguettes and 36h sourdough.</p>
+                  </div>
+                  <span class="btn btn-bb btn-bb-yellow btn-bb-sm w-100">Explore Breads</span>
+                </div>
+              </a>
+            </div>
+
+            <!-- Category 6: Savory & Hot Snacks -->
+            <div class="col-md-6 col-lg-4">
+              <a href="menu.html?category=savory" class="text-decoration-none">
+                <div class="category-card" style="background: var(--bb-pistachio-soft);">
+                  <div>
+                    <div class="category-artwork-container position-relative overflow-hidden mb-3 rounded-4" style="height: 160px; background: #F0FFF4;">
+                      <img loading="lazy" decoding="async" src="assets/images/categories/category-savory.webp" alt="Savory & Snacks" class="w-100 h-100" style="object-fit: cover; transition: transform 0.4s ease;" onerror="this.style.display='none'; if (this.nextElementSibling) this.nextElementSibling.style.display='flex';" />
+                      <div class="category-icon-box w-100 h-100" style="display: none; align-items: center; justify-content: center; font-size: 3rem;">🥟</div>
+                    </div>
+                    <h4 class="brand-font mb-2 text-dark">Savory & Snacks</h4>
+                    <p class="small text-muted mb-3">Crisp chicken patties, spiced potato puffs & cheesy garlic bread.</p>
+                  </div>
+                  <span class="btn btn-bb btn-bb-green btn-bb-sm w-100">Explore Savories</span>
+                </div>
+              </a>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 06: SIGNATURE BESTSELLERS -->
+      <section class="py-5" style="background-color: var(--bb-cream);">
+        <div class="container-custom">
+          <div class="d-flex flex-wrap align-items-end justify-content-between mb-4">
+            <div>
+              <span class="badge bg-warning text-dark rounded-pill px-3 py-1 mb-2">COMMUNITY LOVES THESE</span>
+              <h2 class="display-6 fw-bold brand-font mb-0">Customer Favorites</h2>
+              <p class="text-muted mb-0">The treats everyone keeps coming back for.</p>
+            </div>
+            <a href="menu.html" class="btn btn-bb btn-bb-outline btn-bb-sm mt-3 mt-md-0">
+              View All Products <i class="bi bi-arrow-right"></i>
+            </a>
+          </div>
+
+          <div class="row g-4" id="bestsellerProductsRow">
+            <!-- Rendered dynamically by script for consistency -->
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 07: A TASTE OF EVERY CATEGORY -->
+      <section class="py-5 bg-white" id="complete-menu">
+        <div class="container-custom">
+          <div class="text-center mb-4">
+            <span class="badge bg-danger text-white rounded-pill px-3 py-1 mb-2">A LITTLE TASTE</span>
+            <h2 class="display-5 fw-bold brand-font mb-2">A Bite From Every Shelf</h2>
+            <p class="text-muted" style="max-width: 650px; margin: 0 auto;">
+              Pick a category to peek at a few of our favorites. The full menu is waiting for you just below.
+            </p>
+          </div>
+
+          <div class="bb-taste-tabs d-flex flex-wrap gap-2 justify-content-center mb-4" role="group" aria-label="Menu categories">
+            <button type="button" class="btn btn-bb btn-bb-outline btn-bb-sm active" data-home-cat="cakes" aria-controls="homeTasteGrid" aria-pressed="true">Cakes</button>
+            <button type="button" class="btn btn-bb btn-bb-outline btn-bb-sm" data-home-cat="cookies" aria-controls="homeTasteGrid" aria-pressed="false">Cookies</button>
+            <button type="button" class="btn btn-bb btn-bb-outline btn-bb-sm" data-home-cat="pastries" aria-controls="homeTasteGrid" aria-pressed="false">Pastries</button>
+            <button type="button" class="btn btn-bb btn-bb-outline btn-bb-sm" data-home-cat="pies" aria-controls="homeTasteGrid" aria-pressed="false">Pies & Tarts</button>
+            <button type="button" class="btn btn-bb btn-bb-outline btn-bb-sm" data-home-cat="breads" aria-controls="homeTasteGrid" aria-pressed="false">Breads</button>
+            <button type="button" class="btn btn-bb btn-bb-outline btn-bb-sm" data-home-cat="savory" aria-controls="homeTasteGrid" aria-pressed="false">Savory</button>
+            <button type="button" class="btn btn-bb btn-bb-outline btn-bb-sm" data-home-cat="essentials" aria-controls="homeTasteGrid" aria-pressed="false">Essentials</button>
+            <button type="button" class="btn btn-bb btn-bb-outline btn-bb-sm" data-home-cat="merchandise" aria-controls="homeTasteGrid" aria-pressed="false">Merchandise</button>
+          </div>
+
+          <div class="row g-4 product-grid bb-taste-grid" id="homeTasteGrid" aria-live="polite"></div>
+
+          <div class="text-center mt-2">
+            <a href="menu.html?category=cakes" id="homeTasteCategoryLink" class="d-inline-block small fw-bold text-decoration-none mb-4" style="color: var(--bb-cherry-red);">
+              See all Cakes <i class="bi bi-arrow-right"></i>
+            </a>
+            <div>
+              <a href="menu.html" class="btn btn-bb btn-bb-primary bb-explore-btn">
+                <i class="bi bi-stars"></i> Explore Sweetness <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+            <p class="small text-muted mt-3 mb-0"><i class="bi bi-shield-check text-success"></i> 50+ treats baked fresh daily, all on our full menu</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 08: SPECIAL OFFERS & BUNDLES -->
+      <section class="py-5" id="sweet-promotions" style="background: linear-gradient(180deg, #FDEBF2 0%, var(--bb-cream) 100%);">
+        <div class="container-custom">
+          <div class="text-center mb-5">
+            <span class="badge bg-danger text-white rounded-pill px-3 py-1 mb-2">SWEET PROMOTIONS</span>
+            <h2 class="display-6 fw-bold brand-font mb-2">A Little Extra Sweetness</h2>
+            <p class="text-muted">Special seasonal bundles, celebration boxes, and discount codes.</p>
+          </div>
+
+          <div class="row g-4" id="promotionDealsGrid">
+            
+            <!-- Promo Card 1 -->
+            <div class="col-md-6 col-lg-4">
+              <div class="clay-card h-100 p-4 text-center d-flex flex-column" style="background: white;">
+                <span class="badge bg-warning text-dark px-3 py-1 rounded-pill mb-3 align-self-center">BUNDLE DEAL</span>
+                <div class="bb-promotion-icon mb-2" aria-hidden="true"><i class="bi bi-sunrise"></i></div>
+                <h4 class="brand-font mb-2">Morning Breakfast Box</h4>
+                <p class="small text-muted mb-3 flex-grow-1">2 Butter Croissants, 1 Loaf Sourdough, and 4 Sweet Milk Buns.</p>
+                <div class="d-flex justify-content-center align-items-center gap-2 mb-3">
+                  <span class="text-muted text-decoration-line-through">Rs. 1,350</span>
+                  <span class="fw-bold fs-4 text-danger brand-font">Rs. 1,090</span>
+                </div>
+                <button class="btn btn-bb btn-bb-primary w-100" onclick="BakerzCart.addItem({ id: 'bundle-breakfast', name: 'Morning Breakfast Box', price: 1090, icon: '🥐', placeholderBg: 'placeholder-bg-pastry' }, 1)">
+                  Add Bundle to Basket
+                </button>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+              <div class="clay-card h-100 p-4 text-center d-flex flex-column" style="background: white;">
+                <span class="badge bg-warning text-dark px-3 py-1 rounded-pill mb-3 align-self-center">PASTRY LOVERS</span>
+                <div class="bb-promotion-icon mb-2" aria-hidden="true"><i class="bi bi-cup-hot"></i></div>
+                <h4 class="brand-font mb-2">Morning Viennoiserie Bundle</h4>
+                <p class="small text-muted mb-3 flex-grow-1">French Butter Croissants, Pain au Chocolat, and Cinnamon Cruffins fresh from the morning bake.</p>
+                <div class="d-flex justify-content-center align-items-center gap-2 mb-3">
+                  <span class="text-muted text-decoration-line-through">Rs. 2,180</span>
+                  <span class="fw-bold fs-4 text-danger brand-font">Rs. 1,790</span>
+                </div>
+                <button type="button" class="btn btn-bb btn-bb-primary w-100" onclick="BakerzCart.addItem({ id: 'bundle-viennoiserie', name: 'Morning Viennoiserie Bundle', price: 1790, categoryName: 'Bundle Deals', imageAsset: 'assets/images/products/pastries-showcase.webp', placeholderBg: 'placeholder-bg-pastry' }, 1)">Add Bundle to Basket</button>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+              <div class="clay-card h-100 p-4 text-center d-flex flex-column" style="background: white;">
+                <span class="badge bg-warning text-dark px-3 py-1 rounded-pill mb-3 align-self-center">TEA-TIME FAVORITES</span>
+                <div class="bb-promotion-icon mb-2" aria-hidden="true"><i class="bi bi-heart"></i></div>
+                <h4 class="brand-font mb-2">Gourmet Cookies & Tea Box</h4>
+                <p class="small text-muted mb-3 flex-grow-1">Assorted chocolate chip, pistachio and shortbread cookies paired with crispy cardamom rusks.</p>
+                <div class="d-flex justify-content-center align-items-center gap-2 mb-3">
+                  <span class="text-muted text-decoration-line-through">Rs. 1,820</span>
+                  <span class="fw-bold fs-4 text-danger brand-font">Rs. 1,490</span>
+                </div>
+                <button type="button" class="btn btn-bb btn-bb-primary w-100" onclick="BakerzCart.addItem({ id: 'bundle-hightea', name: 'Gourmet Cookies & Tea Box', price: 1490, categoryName: 'Bundle Deals', imageAsset: 'assets/images/products/cookies-showcase.webp', placeholderBg: 'placeholder-bg-cookie' }, 1)">Add Bundle to Basket</button>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+              <div class="clay-card h-100 p-4 text-center d-flex flex-column" style="background: white;">
+                <span class="badge bg-success text-white px-3 py-1 rounded-pill mb-3 align-self-center">WEEKEND CELEBRATION</span>
+                <div class="bb-promotion-icon mb-2" aria-hidden="true"><i class="bi bi-cake2"></i></div>
+                <h4 class="brand-font mb-2">Grand Artisan Cake Fiesta</h4>
+                <p class="small text-muted mb-3 flex-grow-1">A tasting flight of Chocolate Fudge, Red Velvet, Blueberry Cheesecake and Strawberry Shortcake.</p>
+                <div class="d-flex justify-content-center align-items-center gap-2 mb-3">
+                  <span class="text-muted text-decoration-line-through">Rs. 4,500</span>
+                  <span class="fw-bold fs-4 text-danger brand-font">Rs. 3,650</span>
+                </div>
+                <button type="button" class="btn btn-bb btn-bb-primary w-100" onclick="BakerzCart.addItem({ id: 'bundle-fiesta', name: 'Grand Artisan Cake Fiesta', price: 3650, categoryName: 'Bundle Deals', imageAsset: 'assets/images/products/cakes-showcase.webp', placeholderBg: 'placeholder-bg-cake' }, 1)">Add Bundle to Basket</button>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+              <div class="clay-card h-100 p-4 text-center d-flex flex-column" style="background: white;">
+                <span class="badge bg-success text-white px-3 py-1 rounded-pill mb-3 align-self-center">SAVORY SNACKS</span>
+                <div class="bb-promotion-icon mb-2" aria-hidden="true"><i class="bi bi-basket2"></i></div>
+                <h4 class="brand-font mb-2">Savory Snack Box</h4>
+                <p class="small text-muted mb-3 flex-grow-1">2 Chicken Patties, 2 Potato Patties, and Garlic Bread for a hearty afternoon snack.</p>
+                <div class="d-flex justify-content-center align-items-center gap-2 mb-3">
+                  <span class="text-muted text-decoration-line-through">Rs. 1,150</span>
+                  <span class="fw-bold fs-4 text-danger brand-font">Rs. 990</span>
+                </div>
+                <button type="button" class="btn btn-bb btn-bb-primary w-100" onclick="BakerzCart.addItem({ id: 'bundle-savory-snacks', name: 'Savory Snack Box', price: 990, categoryName: 'Bundle Deals', imageAsset: 'assets/images/products/chicken-patties.webp', placeholderBg: 'placeholder-bg-pastry' }, 1, '2 Chicken Patties + 2 Potato Patties + Garlic Bread')">Add Bundle to Basket</button>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+              <div class="clay-card h-100 p-4 text-center d-flex flex-column" style="background: white;">
+                <span class="badge bg-warning text-dark px-3 py-1 rounded-pill mb-3 align-self-center">MADE TO SHARE</span>
+                <div class="bb-promotion-icon mb-2" aria-hidden="true"><i class="bi bi-box-seam"></i></div>
+                <h4 class="brand-font mb-2">Cookie Sharing Box</h4>
+                <p class="small text-muted mb-3 flex-grow-1">6 cookies to share: 2 Chocolate Chip, 2 Double Chocolate, and 2 Pistachio Cookies.</p>
+                <div class="d-flex justify-content-center align-items-center gap-2 mb-3">
+                  <span class="text-muted text-decoration-line-through">Rs. 2,120</span>
+                  <span class="fw-bold fs-4 text-danger brand-font">Rs. 1,790</span>
+                </div>
+                <button type="button" class="btn btn-bb btn-bb-primary w-100" onclick="BakerzCart.addItem({ id: 'bundle-cookie-sharing', name: 'Cookie Sharing Box', price: 1790, categoryName: 'Bundle Deals', imageAsset: 'assets/images/products/cookies-showcase.webp', placeholderBg: 'placeholder-bg-cookie' }, 1, '2 Chocolate Chip + 2 Double Chocolate + 2 Pistachio Cookies')">Add Bundle to Basket</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="row g-4 mt-1" id="promotionExtrasGrid">
+            <!-- Promo Card 2: Interactive Gift Box Builder CTA -->
+            <div class="col-md-6">
+              <div class="clay-card h-100 p-4 text-center border-2 border-danger d-flex flex-column" style="background: #FFF9E6;">
+                <span class="badge bg-danger text-white px-3 py-1 rounded-pill mb-3 align-self-center">CUSTOM GIFTING</span>
+                <div class="bb-promotion-icon mb-2" aria-hidden="true"><i class="bi bi-gift"></i></div>
+                <h4 class="brand-font mb-2">Build Your Own Gift Box</h4>
+                <p class="small text-muted mb-3 flex-grow-1">Mix 4 favorites from 22 pastries, cookies, savory bites, and everyday essentials in our custom gift box. You pay the menu price of your picks — gift boxing and ribbon are included.</p>
+                <div class="fw-bold fs-4 text-danger brand-font mb-3">4 Treats · Menu Price</div>
+                <button class="btn btn-bb btn-bb-yellow w-100" data-bs-toggle="modal" data-bs-target="#giftBoxModal">
+                  Build Custom Box
+                </button>
+              </div>
+            </div>
+
+            <!-- Promo Card 3: Promo Coupons -->
+            <div class="col-md-6">
+              <div class="clay-card h-100 p-4 text-center d-flex flex-column" style="background: white;">
+                <span class="badge bg-success text-white px-3 py-1 rounded-pill mb-3 align-self-center">DISCOUNT VOUCHERS</span>
+                <div class="bb-promotion-icon mb-2" aria-hidden="true"><i class="bi bi-ticket-perforated"></i></div>
+                <h4 class="brand-font mb-2">Your Code, Extra Sweetness</h4>
+                <p class="small text-muted mb-3 flex-grow-1">SWEET10 saves 10%. BAKERZ20 saves 20% on orders of Rs. 2,000 or more.</p>
+                <form class="bb-promo-form" onsubmit="BakerzCart.applyPromo('homePromoInput'); return false;">
+                  <label for="homePromoInput" class="small fw-bold d-block text-start mb-1">Enter your promo code</label>
+                  <input type="text" id="homePromoInput" class="form-control form-control-bb mb-2" placeholder="e.g. SWEET10" maxlength="32" autocomplete="off" autocapitalize="characters" spellcheck="false" aria-describedby="homePromoInputFeedback">
+                  <div id="homePromoInputFeedback" class="small text-muted text-start mb-2" role="status">FREESHIP: free delivery. See all 14 coupons on the Offers page.</div>
+                  <button type="submit" class="btn btn-bb btn-bb-green w-100">Apply Coupon</button>
+                  <button type="button" class="btn btn-link text-muted btn-sm mt-2" onclick="BakerzCart.removePromo('homePromoInput')">Remove applied code</button>
+                </form>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 09: CAKE STUDIO TEASER -->
+      <section class="py-5 bg-white" id="cake-studio">
+        <div class="container-custom">
+          <div class="row g-5 align-items-center">
+
+            <div class="col-lg-6">
+              <span class="badge bg-warning text-dark rounded-pill px-3 py-1 mb-3">INTERACTIVE CAKE STUDIO</span>
+              <h2 class="display-5 fw-bold brand-font mb-3">Your Cake.<br><span style="color: var(--bb-cherry-red);">Your Imagination.</span></h2>
+              <p class="lead text-muted mb-4">
+                Design every detail in real-time — from tiers and sponge flavors to pastel frosting palettes, artisan toppings, and custom piped calligraphy messages.
+              </p>
+              <ul class="list-unstyled mb-4">
+                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>6 cake sizes from Bento to 4-Tier Showstopper</li>
+                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>12 premium sponge flavors</li>
+                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>6 frosting types &amp; 12 pastel color pills</li>
+                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>10 artisan toppings + live price calculator</li>
+                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Custom piped message in white chocolate calligraphy</li>
+              </ul>
+              <a href="cake-studio.html" class="btn btn-bb btn-bb-primary">
+                <i class="bi bi-stars me-2"></i>Launch Cake Studio &rarr;
+              </a>
+            </div>
+
+            <div class="col-lg-6 text-center">
+              <div class="clay-card p-5" style="background: linear-gradient(135deg, #FDEBF2 0%, #FFF9E6 100%);">
+                <div style="font-size: 5rem;" class="anim-float mb-2">🎂</div>
+                <div class="d-flex justify-content-center gap-3 mb-3" style="font-size: 2rem;">
+                  <span class="anim-float-reverse">🍓</span>
+                  <span class="anim-float">🧁</span>
+                  <span class="anim-float-reverse">🌸</span>
+                  <span class="anim-float">✨</span>
+                </div>
+                <h4 class="brand-font mb-2">3D Live Preview</h4>
+                <p class="text-muted small mb-4">Watch your dream cake take shape in real-time as you customize each element.</p>
+                <a href="cake-studio.html" class="btn btn-bb btn-bb-yellow w-100">
+                  <i class="bi bi-palette-fill me-2"></i>Start Designing Now
+                </a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+      <!-- SECTION 10: OUR STORY -->
+      <section class="py-5" style="background-color: var(--bb-cream);">
+        <div class="container-custom">
+          <div class="row align-items-center g-5">
+            <div class="col-lg-6">
+              <span class="badge bg-pink text-dark rounded-pill px-3 py-1 mb-2">OUR BAKING PASSION</span>
+              <h2 class="display-5 fw-bold brand-font mb-3">Baked With Love, Shared With Happiness.</h2>
+              <p class="lead text-muted mb-4">
+                Bakerz Bite began with a simple belief: the aroma of warm, freshly baked pastry can brighten even the cloudiest day.
+              </p>
+              <p class="text-muted mb-4">
+                Every loaf of sourdough, every butter croissant, and every delicate celebration cake is crafted from scratch in small batches using traditional slow-fermentation techniques and pure farm-fresh ingredients. We never compromise on butter, time, or smiles.
+              </p>
+
+              <div class="row g-3">
+                <div class="col-sm-6">
+                  <div class="d-flex align-items-center gap-3 p-3 bg-white rounded-3 border shadow-sm">
+                    <span class="fs-2">🌾</span>
+                    <div>
+                      <h6 class="mb-0 brand-font">Quality Ingredients</h6>
+                      <small class="text-muted">Unbleached stoneground flours</small>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="d-flex align-items-center gap-3 p-3 bg-white rounded-3 border shadow-sm">
+                    <span class="fs-2">⏰</span>
+                    <div>
+                      <h6 class="mb-0 brand-font">Freshly Prepared</h6>
+                      <small class="text-muted">Baked every 4 hours daily</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-6 text-center">
+              <!-- PRODUCT IMAGE PLACEHOLDER: assets/images/hero/story-kitchen.webp -->
+              <div class="clay-card p-5" style="background: linear-gradient(135deg, #FFF9E6 0%, #FDEBF2 100%);">
+                <div style="font-size: 5rem;" class="anim-float">🥖</div>
+                <h4 class="brand-font mt-3">The Hearth of Bakerz Bite</h4>
+                <p class="text-muted small">Where heritage craftsmanship meets playful pastel imagination.</p>
+                <div class="d-inline-flex align-items-center gap-2 px-3 py-1 bg-white rounded-pill border shadow-sm">
+                  <i class="bi bi-check-circle-fill text-success"></i> 
+                  <span class="small fw-bold">Daily Artisan Standard</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 11: WHY CHOOSE US -->
+      <section class="py-5 bg-white">
+        <div class="container-custom">
+          <div class="text-center mb-5">
+            <span class="badge bg-warning text-dark rounded-pill px-3 py-1 mb-2">WHY WE STAND OUT</span>
+            <h2 class="display-6 fw-bold brand-font mb-2">Why Choose Bakerz Bite?</h2>
+            <p class="text-muted">The core values baked into every single crumb.</p>
+          </div>
+
+          <div class="row g-4">
+            <div class="col-md-3">
+              <div class="clay-card p-4 text-center h-100" style="background: var(--bb-butter-soft);">
+                <div class="stat-icon mx-auto mb-3" style="background: white;">⚡</div>
+                <h5 class="brand-font mb-2">Freshness First</h5>
+                <p class="small text-muted mb-0">Never yesterday's bakes. Loaves and pastries coming hot from our hearth twice daily.</p>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="clay-card p-4 text-center h-100" style="background: var(--bb-strawberry-soft);">
+                <div class="stat-icon mx-auto mb-3" style="background: white;">🍓</div>
+                <h5 class="brand-font mb-2">Pure Ingredients</h5>
+                <p class="small text-muted mb-0">Real 84% butter, farm-fresh eggs, pure Madagascar vanilla, and unbleached flours.</p>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="clay-card p-4 text-center h-100" style="background: var(--bb-lavender-soft);">
+                <div class="stat-icon mx-auto mb-3" style="background: white;">🎨</div>
+                <h5 class="brand-font mb-2">Made With Care</h5>
+                <p class="small text-muted mb-0">Hand-shaped brioche, hand-rolled croissants, and custom artist-piped celebration cakes.</p>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="clay-card p-4 text-center h-100" style="background: var(--bb-pistachio-soft);">
+                <div class="stat-icon mx-auto mb-3" style="background: white;">🎉</div>
+                <h5 class="brand-font mb-2">Every Occasion</h5>
+                <p class="small text-muted mb-0">From humble morning tea rusks to unforgettable 3-tier grand wedding centerpieces.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 12: GALLERY PREVIEW -->
+      <section class="py-5" style="background-color: var(--bb-cream);">
+        <div class="container-custom">
+          <div class="d-flex flex-wrap align-items-end justify-content-between mb-4">
+            <div>
+              <span class="badge bg-pink text-dark rounded-pill px-3 py-1 mb-2">SWEET GALLERY</span>
+              <h2 class="display-6 fw-bold brand-font mb-0">A Peek Inside Our Sweet World</h2>
+              <p class="text-muted mb-0">Glimpse our kitchen creations, artisan scoring, and celebration cakes.</p>
+            </div>
+            <a href="gallery.html" class="btn btn-bb btn-bb-outline btn-bb-sm mt-3 mt-md-0">
+              View Full Gallery <i class="bi bi-images"></i>
+            </a>
+          </div>
+
+          <div class="gallery-grid" id="galleryGrid">
+            <!-- Rendered by js/gallery.js -->
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 13: CUSTOMER TESTIMONIALS -->
+      <section class="py-5 bg-white">
+        <div class="container-custom">
+          <div class="text-center mb-5">
+            <span class="badge bg-warning text-dark rounded-pill px-3 py-1 mb-2">VERIFIED REVIEWS</span>
+            <h2 class="display-6 fw-bold brand-font mb-2">Sweet Words From Our Customers</h2>
+            <p class="text-muted">Real love and sweet reviews from our daily bakery guests.</p>
+          </div>
+
+          <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner" style="max-width: 760px; margin: 0 auto;">
+              
+              <div class="carousel-item active">
+                <div class="clay-card p-4 p-md-5 text-center" style="background: var(--bb-strawberry-soft);">
+                  <div class="text-warning fs-5 mb-3">★★★★★</div>
+                  <p class="fs-5 fst-italic text-dark mb-4">
+                    "The French Baguettes and Butter Croissants are genuinely world-class! Flaky, airy, and with real churned butter flavor. Bakerz Bite has become my family's weekend breakfast ritual."
+                  </p>
+                  <h6 class="brand-font mb-0">Mariam Siddiqui</h6>
+                  <small class="text-muted">North Nazimabad, Karachi</small>
+                </div>
+              </div>
+
+              <div class="carousel-item">
+                <div class="clay-card p-4 p-md-5 text-center" style="background: var(--bb-butter-soft);">
+                  <div class="text-warning fs-5 mb-3">★★★★★</div>
+                  <p class="fs-5 fst-italic text-dark mb-4">
+                    "We used the Cake Studio to design a 2-tier chocolate fudge cake for my daughter's 7th birthday. It turned out even more gorgeous than the 3D preview on the screen! Deliciously rich."
+                  </p>
+                  <h6 class="brand-font mb-0">Omer Farooq</h6>
+                  <small class="text-muted">DHA Phase 5, Karachi</small>
+                </div>
+              </div>
+
+              <div class="carousel-item">
+                <div class="clay-card p-4 p-md-5 text-center" style="background: var(--bb-pistachio-soft);">
+                  <div class="text-warning fs-5 mb-3">★★★★★</div>
+                  <p class="fs-5 fst-italic text-dark mb-4">
+                    "Their chicken patties are unmatched in town—crispy pastry that doesn't feel heavy, with a perfectly seasoned filling. And the cardamom tea rusks are unbelievable with evening chai!"
+                  </p>
+                  <h6 class="brand-font mb-0">Dr. Aimen Tariq</h6>
+                  <small class="text-muted">Clifton, Karachi</small>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Carousel Controls -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev" aria-label="Previous Review">
+              <span class="carousel-control-prev-icon bg-dark rounded-circle p-2" aria-hidden="true"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next" aria-label="Next Review">
+              <span class="carousel-control-next-icon bg-dark rounded-circle p-2" aria-hidden="true"></span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 14: FAQ PREVIEW -->
+      <section class="py-5" style="background-color: var(--bb-cream);">
+        <div class="container-custom" style="max-width: 860px;">
+          <div class="text-center mb-4">
+            <span class="badge bg-danger text-white rounded-pill px-3 py-1 mb-2">QUICK HELP</span>
+            <h2 class="display-6 fw-bold brand-font mb-2">Frequently Asked Questions</h2>
+            <p class="text-muted">Common questions about ordering, custom cakes, and delivery.</p>
+          </div>
+
+          <div class="accordion accordion-flush clay-card p-3" id="homeFaqAccordion">
+            
+            <div class="accordion-item border-bottom">
+              <h2 class="accordion-header" id="faqHead1">
+                <button class="accordion-button collapsed brand-font fs-6" type="button" data-bs-toggle="collapse" data-bs-target="#faqCol1" aria-expanded="false" aria-controls="faqCol1">
+                  What bakery categories and items do you offer?
+                </button>
+              </h2>
+              <div id="faqCol1" class="accordion-collapse collapse" aria-labelledby="faqHead1" data-bs-parent="#homeFaqAccordion">
+                <div class="accordion-body small text-muted">
+                  We bake eight artisan categories: Breads & Loaves (Sourdough, Baguette, White, Whole Wheat), Artisan Cakes (Chocolate Fudge, Red Velvet, Fresh Cream, Celebration), Handcrafted Cookies (Chocolate Chip, Shortbread, Oatmeal Raisin, Pistachio), Croissants & Viennoiserie (Croissants, Pain au Chocolat, Cruffins, Éclairs), Gourmet Pies & Tarts (Apple, Blueberry, Lemon Meringue, Pecan), Savory Items (Chicken & Potato Patties, Garlic Bread), Everyday Essentials (Tea Rusks, Buns, Dinner Rolls), and Bakery Merchandise (Aprons, Ceramic Mugs).
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item border-bottom">
+              <h2 class="accordion-header" id="faqHead2">
+                <button class="accordion-button collapsed brand-font fs-6" type="button" data-bs-toggle="collapse" data-bs-target="#faqCol2" aria-expanded="false" aria-controls="faqCol2">
+                  Can I customize my celebration cake?
+                </button>
+              </h2>
+              <div id="faqCol2" class="accordion-collapse collapse" aria-labelledby="faqHead2" data-bs-parent="#homeFaqAccordion">
+                <div class="accordion-body small text-muted">
+                  Yes! Our interactive <strong>Cake Studio</strong> lets you choose tiers, flavors, buttercream styles, frosting pastel shades, toppings, and a custom piped message with live 3D visual preview and instant price calculations.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item border-bottom">
+              <h2 class="accordion-header" id="faqHead3">
+                <button class="accordion-button collapsed brand-font fs-6" type="button" data-bs-toggle="collapse" data-bs-target="#faqCol3" aria-expanded="false" aria-controls="faqCol3">
+                  How does local delivery and shipping work?
+                </button>
+              </h2>
+              <div id="faqCol3" class="accordion-collapse collapse" aria-labelledby="faqHead3" data-bs-parent="#homeFaqAccordion">
+                <div class="accordion-body small text-muted">
+                  We deliver fresh in insulated temperature-controlled pastry boxes across the city. Delivery is <strong>FREE</strong> for orders above Rs. 1,500. For orders under Rs. 1,500, a standard fee of Rs. 150 applies.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="faqHead4">
+                <button class="accordion-button collapsed brand-font fs-6" type="button" data-bs-toggle="collapse" data-bs-target="#faqCol4" aria-expanded="false" aria-controls="faqCol4">
+                  Where is your flagship bakery located?
+                </button>
+              </h2>
+              <div id="faqCol4" class="accordion-collapse collapse" aria-labelledby="faqHead4" data-bs-parent="#homeFaqAccordion">
+                <div class="accordion-body small text-muted">
+                  Our flagship bakery and live espresso bar is located at <strong>Main Boulevard, North Nazimabad, Karachi</strong>. We are open every day from 8:00 AM to 11:30 PM.
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="text-center mt-3">
+            <a href="faq.html" class="small fw-bold text-danger text-decoration-none">View Complete FAQ Page →</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 15: NEWSLETTER -->
+      <section class="py-5" style="background: linear-gradient(135deg, #FFE5A0 0%, #F5A6C5 100%);">
+        <div class="container-custom" style="max-width: 680px;">
+          <div class="clay-card p-4 p-md-5 text-center" style="background: white;">
+            <div style="font-size: 3rem;" class="anim-float">💌</div>
+            <h3 class="brand-font mb-2">A Little Sweetness in Your Inbox</h3>
+            <p class="text-muted mb-4">
+              Subscribe to get secret weekend discount codes, seasonal menu previews, and bakery stories.
+            </p>
+            <form class="newsletter-form d-flex flex-column flex-sm-row gap-2">
+              <input type="email" class="form-control form-control-bb" placeholder="Enter your email address..." aria-label="Email address for newsletter" autocomplete="email" required>
+              <button type="submit" class="btn btn-bb btn-bb-primary">
+                Subscribe
+              </button>
+            </form>
+            <small class="text-muted d-block mt-2">We respect your privacy. No spam, only freshly baked updates.</small>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- SECTION 16: FOOTER -->
+    <footer class="bakerz-footer">
+      <div class="container-custom">
+        <div class="row g-4 mb-5">
+          
+          <!-- Column 1: Brand Info & Logo -->
+          <div class="col-lg-4 col-md-6">
+            <a href="index.html" class="d-inline-block mb-3">
+              <img loading="lazy" decoding="async" src="assets/images/bakerz-bite-logo.webp" alt="Bakerz Bite Logo" height="58" />
+            </a>
+            <p class="small text-white-50 mb-3" style="max-width: 320px;">
+              Bakerz Bite is a playful 3D clay-styled artisan bakery dedicated to turning simple natural ingredients into extraordinary moments of sweetness.
+            </p>
+            <div class="d-flex gap-2 footer-socials">
+              <a href="https://instagram.com/bakerzbite" target="_blank" rel="noopener noreferrer" class="footer-social-icon" aria-label="Bakerz Bite on Instagram" title="Instagram @bakerzbite"><i class="bi bi-instagram"></i></a>
+              <a href="https://facebook.com/bakerzbite" target="_blank" rel="noopener noreferrer" class="footer-social-icon" aria-label="Bakerz Bite on Facebook" title="Facebook @bakerzbite"><i class="bi bi-facebook"></i></a>
+              <a href="https://tiktok.com/@bakerzbite" target="_blank" rel="noopener noreferrer" class="footer-social-icon" aria-label="Bakerz Bite on TikTok" title="TikTok @bakerzbite"><i class="bi bi-tiktok"></i></a>
+              <a href="https://wa.me/924235789922?text=Hello%20Bakerz%20Bite%21%20I%20would%20like%20to%20order" target="_blank" rel="noopener noreferrer" class="footer-social-icon" aria-label="Chat on WhatsApp" title="WhatsApp Bakery Concierge"><i class="bi bi-whatsapp"></i></a>
+            </div>
+          </div>
+
+          <!-- Column 2: Quick Links -->
+          <div class="col-lg-2 col-md-6 col-6">
+            <h5 class="brand-font mb-3">Quick Links</h5>
+            <ul class="list-unstyled small d-flex flex-column gap-2 mb-0">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="menu.html">Explore Menu</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="cake-studio.html">Cake Studio</a></li>
+              <li><a href="gallery.html">Sweet Gallery</a></li>
+              <li><a href="offers.html">Offers & Deals</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+          </div>
+
+          <!-- Column 3: Bakery Categories -->
+          <div class="col-lg-3 col-md-6 col-6">
+            <h5 class="brand-font mb-3">Bakery Categories</h5>
+            <ul class="list-unstyled small d-flex flex-column gap-2 mb-0">
+              <li><a href="menu.html?category=breads">Breads & Artisan Loaves</a></li>
+              <li><a href="menu.html?category=cakes">Cakes & Gateaux</a></li>
+              <li><a href="menu.html?category=cookies">Handcrafted Cookies</a></li>
+              <li><a href="menu.html?category=pastries">Croissants & Viennoiserie</a></li>
+              <li><a href="menu.html?category=pies">Gourmet Pies & Tarts</a></li>
+              <li><a href="menu.html?category=savory">Savory & Snack Items</a></li>
+              <li><a href="menu.html?category=essentials">Everyday Essentials & Rusks</a></li>
+              <li><a href="menu.html?category=merchandise">Bakery Merchandise</a></li>
+            </ul>
+          </div>
+
+          <!-- Column 4: Contact & Flagship Location -->
+          <div class="col-lg-3 col-md-6">
+            <h5 class="brand-font mb-3">Bakery Hearth</h5>
+            <ul class="list-unstyled small text-white-50 d-flex flex-column gap-2 mb-3">
+              <li><i class="bi bi-geo-alt text-danger me-2"></i><span class="bakery-location-display">Main Boulevard, North Nazimabad, Karachi</span></li>
+              <li><i class="bi bi-telephone text-warning me-2"></i><span class="bakery-phone-display">0302 2669408</span></li>
+              <li><i class="bi bi-envelope text-info me-2"></i>irtizariazreal@gmail.com</li>
+              <li><i class="bi bi-clock text-success me-2"></i><span class="bakery-hours-display">8:00 AM – 11:30 PM Daily</span></li>
+            </ul>
+            <div class="p-2 rounded bg-black bg-opacity-25 border border-secondary border-opacity-25 small">
+              <span class="badge bg-danger text-white me-1">Flagship Bakery</span>
+              <span class="text-white-50">Artisan Boulangerie & Cafe</span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Footer Bottom Bar -->
+        <div class="pt-4 border-top border-secondary border-opacity-25 d-flex flex-wrap justify-content-between align-items-center gap-2 small text-white-50">
+          <div>
+            © 2026 Bakerz Bite Patisserie. All rights reserved.
+          </div>
+          <div class="d-flex gap-3">
+            <a href="sitemap.html" class="text-white-50">Sitemap</a>
+            <a href="faq.html" class="text-white-50">FAQ</a>
+            <a href="admin-demo.html" class="text-white-50">Admin Demo</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- SLIDE-OVER CART DRAWER -->
+    <div class="cart-drawer-overlay" id="cartDrawerOverlay"></div>
+    <div class="cart-drawer" id="cartDrawer" aria-labelledby="cartDrawerTitle" role="dialog" aria-modal="true">
+      <div class="cart-drawer-header">
+        <h5 class="brand-font mb-0" id="cartDrawerTitle">
+          <i class="bi bi-basket3-fill text-danger me-2"></i>Your Sweet Basket
+        </h5>
+        <button type="button" class="btn-close" id="cartDrawerCloseBtn" aria-label="Close Basket"></button>
+      </div>
+      <div class="cart-drawer-body" id="cartDrawerItems">
+        <!-- Rendered by js/cart.js -->
+      </div>
+      <div class="cart-drawer-footer" id="cartDrawerSummary">
+        <!-- Rendered by js/cart.js -->
+      </div>
+    </div>
+
+    <!-- QUICK VIEW PRODUCT MODAL -->
+    <div class="modal fade" id="quickViewModal" tabindex="-1" aria-labelledby="quickViewModalTitle" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content bb-modal-content">
+          <div class="modal-header bb-modal-header">
+            <h5 class="modal-title brand-font" id="quickViewModalTitle">Treat Details</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body bb-modal-body" id="quickViewModalBody">
+            <!-- Rendered by js/filters.js -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- GLOBAL QUICK SEARCH MODAL -->
+    <div class="modal fade" id="globalSearchModal" tabindex="-1" aria-labelledby="globalSearchModalTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content bb-modal-content">
+          <div class="modal-header bb-modal-header">
+            <h5 class="modal-title brand-font" id="globalSearchModalTitle">Search Bakerz Bite</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body bb-modal-body">
+            <div class="bb-search-row mb-3">
+              <button type="button" class="bb-search-icon" aria-label="Search" onclick="document.getElementById('globalSearchInput').focus()">
+                <i class="bi bi-search"></i>
+              </button>
+              <input type="text" id="globalSearchInput" class="form-control form-control-bb" aria-label="Search the bakery menu" placeholder="Search menu by name or category..." oninput="BakerzSearch.handleSearchInput(this.value)">
+            </div>
+            <div id="globalSearchResults"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- BUILD YOUR OWN GIFT BOX MODAL -->
+    <div class="modal fade" id="giftBoxModal" tabindex="-1" aria-labelledby="giftBoxModalTitle" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content bb-modal-content">
+          <div class="modal-header bb-modal-header">
+            <h5 class="modal-title brand-font" id="giftBoxModalTitle">Build Your Own Gift Box</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body bb-modal-body">
+            <p class="text-muted small mb-3">Choose 4 different treats. Mix pastries, cookies, savory bites, and essentials. You pay the regular menu price for each pick — gift boxing is included, and the box price updates as you choose.</p>
+            <div id="giftBoxTreatSelection"></div>
+          </div>
+          <div class="modal-footer bb-gift-footer d-block">
+            <div class="small text-muted mb-2" id="giftBoxSelectionSummary" aria-live="polite">Your selected treats will appear here.</div>
+            <div class="d-flex flex-wrap gap-2 justify-content-between align-items-center">
+              <div>
+                <span class="fw-bold" id="giftBoxCountDisplay">0 / 4 items chosen</span>
+                <div class="text-danger fw-bold fs-5 brand-font" id="giftBoxPriceDisplay">Box Price: Rs. 0</div>
+              </div>
+              <button type="button" id="giftBoxAddBtn" class="btn btn-bb btn-bb-primary" onclick="BakerzGiftBox.addGiftBoxToCart()" disabled>Add Gift Box to Basket</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- LIGHTBOX MODAL FOR GALLERY -->
+    <div class="lightbox-modal" id="galleryLightboxModal">
+      <div class="lightbox-content-box p-4">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+          <div>
+            <h5 class="brand-font mb-0" id="lightboxTitle">Gallery Photo</h5>
+            <span class="small text-muted" id="lightboxCounter">1 / 8</span>
+          </div>
+          <button class="btn btn-outline-danger btn-sm rounded-circle" onclick="BakerzGallery.closeLightbox()" aria-label="Close Lightbox">
+            <i class="bi bi-x-lg"></i>
+          </button>
+        </div>
+        <div id="lightboxImageArea" class="mb-3">
+          <!-- Lightbox image placeholder rendered by js/gallery.js -->
+        </div>
+        <p class="text-muted small mb-3" id="lightboxDesc"></p>
+        <div class="d-flex justify-content-between">
+          <button class="btn btn-bb btn-bb-outline btn-bb-sm" onclick="BakerzGallery.prev()">
+            <i class="bi bi-chevron-left"></i> Previous
+          </button>
+          <button class="btn btn-bb btn-bb-outline btn-bb-sm" onclick="BakerzGallery.next()">
+            Next <i class="bi bi-chevron-right"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ORDER CONFIRMATION MODAL -->
+    <div class="modal fade" id="orderConfirmationModal" tabindex="-1" aria-labelledby="orderConfirmTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content bb-modal-content text-center p-4">
+          <div style="font-size: 4rem;" class="anim-float">🎉</div>
+          <h3 class="brand-font mt-2" id="orderConfirmTitle">Baking Happiness!</h3>
+          <p class="text-muted small">Your demonstration order has been placed successfully.</p>
+          <div class="p-3 bg-light rounded-3 border mb-3 text-start">
+            <div class="d-flex justify-content-between mb-1">
+              <span class="text-muted small">Order ID:</span>
+              <span class="fw-bold font-monospace" id="confirmationOrderId">#BB-109284</span>
+            </div>
+            <div class="d-flex justify-content-between mb-1">
+              <span class="text-muted small">Estimated Delivery:</span>
+              <span class="fw-bold text-success">35–45 Minutes</span>
+            </div>
+            <div class="d-flex justify-content-between">
+              <span class="text-muted small">Total Amount:</span>
+              <span class="fw-bold text-danger" id="confirmationOrderTotal">Rs. 0</span>
+            </div>
+          </div>
+          <a href="dashboard.html" class="btn btn-bb btn-bb-primary w-100 mb-2">View in Dashboard</a>
+          <button type="button" class="btn btn-link text-muted small" data-bs-dismiss="modal">Continue Browsing</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap 5 Bundle JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Bakerz Bite Core JS Modules -->
+    <script src="js/products.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/wishlist.js"></script>
+    <script src="js/filters.js"></script>
+    <script src="js/gallery.js"></script>
+    <script src="js/forms.js"></script>
+    <script src="js/dashboard.js"></script>
+    <script src="js/main.js"></script>
+
+    <!-- Homepage Specific Initialization -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        // Render Balanced Bestsellers (Bread, Cake, Pastry)
+        const bestsellersRow = document.getElementById('bestsellerProductsRow');
+        if (bestsellersRow && window.BakerzProducts) {
+          // Balanced Selection: 6 Curated Artisan Delights across categories
+          const balancedIds = ['cake-chocolate-fudge', 'cookie-choco-chip', 'pastry-butter-croissant', 'cake-blueberry-cheesecake', 'pie-classic-apple', 'bread-sourdough'];
+          let bestsellers = (window.BakerzProducts || []).filter(p => balancedIds.includes(p.id));
+          
+          if (bestsellers.length < 6) {
+            bestsellers = (window.BakerzProducts || []).filter(p => p.featured).slice(0, 6);
+          }
+
+          let bHtml = '';
+          bestsellers.forEach(p => {
+            const safeId = (p.id || '').replace(/['"]/g, '');
+            const safeName = (p.name || '').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+            const safeDesc = (p.description || '').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+
+            bHtml += `
+              <div class="col-md-6 col-lg-4">
+                <div class="product-card h-100 d-flex flex-column">
+                  <span class="product-badge-category">${p.badge || p.categoryName}</span>
+                  <button class="product-wishlist-btn" data-product-id="${safeId}" aria-label="Save ${safeName} to Wishlist" aria-pressed="false" onclick="BakerzWishlist.toggle('${safeId}')">
+                    <i class="bi bi-heart"></i>
+                  </button>
+
+                  <!-- Product Real Image with Fallback -->
+                  <div class="product-img-wrapper position-relative overflow-hidden" role="button" tabindex="0" aria-label="Quick view ${safeName}" onclick="BakerzFilters.openQuickView('${safeId}')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();BakerzFilters.openQuickView('${safeId}')}" style="cursor: pointer; height: 210px; border-radius: var(--radius-md) var(--radius-md) 0 0; background: var(--bb-cream);">
+                    <img src="${p.imageAsset || ''}" 
+                         alt="${safeName}" 
+                         class="product-real-img w-100 h-100" 
+                         style="object-fit: cover; transition: transform 0.4s ease;" 
+                         loading="lazy" 
+                         decoding="async" 
+                         onerror="this.onerror=null; this.style.display='none'; if (this.nextElementSibling) this.nextElementSibling.style.display='flex';" />
+                    <div class="product-placeholder-img ${p.placeholderBg || 'placeholder-bg-cake'} w-100 h-100" style="display: ${p.imageAsset ? 'none' : 'flex'}; align-items: center; justify-content: center; flex-direction: column;">
+                      <span class="placeholder-icon">${p.icon || '🧁'}</span>
+                      <span class="placeholder-tag">${p.categoryName || 'Bestseller'}</span>
+                    </div>
+                  </div>
+
+                  <div class="product-card-body d-flex flex-column flex-grow-1">
+                    <div class="product-rating">
+                      <span>★ ${Number(p.rating || 5.0).toFixed(1)}</span>
+                      <span class="review-count">(${p.reviewsCount || 40} demo reviews)</span>
+                    </div>
+                    <h5 class="product-title">${safeName}</h5>
+                    <p class="product-desc flex-grow-1">${safeDesc}</p>
+                    <div class="product-footer pt-2 mt-auto">
+                      <div class="product-price">Rs. ${Number(p.price || 0).toLocaleString()}</div>
+                      <div class="product-card-actions">
+                        <button class="btn btn-bb btn-bb-outline btn-bb-sm" title="Quick View" aria-label="Quick view ${safeName}" onclick="BakerzFilters.openQuickView('${safeId}')">
+                          <i class="bi bi-eye"></i>
+                        </button>
+                        <button class="btn btn-bb btn-bb-primary btn-bb-sm" aria-label="Add ${safeName} to basket" onclick="BakerzCart.addItem('${safeId}', 1)">
+                          <i class="bi bi-basket3-fill"></i> Add
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            `;
+          });
+          bestsellersRow.innerHTML = bHtml;
+        }
+
+        const tasteGrid = document.getElementById('homeTasteGrid');
+        const tasteLink = document.getElementById('homeTasteCategoryLink');
+        const tasteTabs = document.querySelectorAll('[data-home-cat]');
+        if (tasteGrid && window.BakerzProducts && window.BakerzFilters) {
+          const shownAbove = ['cake-chocolate-fudge', 'cookie-choco-chip', 'pastry-butter-croissant', 'cake-blueberry-cheesecake', 'pie-classic-apple', 'bread-sourdough'];
+          const renderTaste = function (cat) {
+            const all = window.BakerzProducts.filter(p => p.category === cat && !/showcase/.test(p.id));
+            let picks = all.filter(p => !shownAbove.includes(p.id));
+            if (picks.length < 3) picks = all;
+            picks = picks.sort((a, b) => (b.featured ? 1 : 0) - (a.featured ? 1 : 0)).slice(0, 3);
+
+            tasteGrid.innerHTML = picks.map(p => window.BakerzFilters.renderProductCard(p)).join('');
+            if (window.BakerzWishlist) window.BakerzWishlist.syncHeartButtons();
+
+            tasteTabs.forEach(t => {
+              const on = t.getAttribute('data-home-cat') === cat;
+              t.classList.toggle('active', on);
+              t.setAttribute('aria-pressed', on ? 'true' : 'false');
+            });
+
+            const label = document.querySelector(`[data-home-cat="${cat}"]`).textContent.trim();
+            tasteGrid.setAttribute('aria-label', `${label} preview`);
+            tasteLink.href = `menu.html?category=${encodeURIComponent(cat)}`;
+            tasteLink.innerHTML = `See all ${label} <i class="bi bi-arrow-right"></i>`;
+          };
+          tasteTabs.forEach(t => t.addEventListener('click', () => renderTaste(t.getAttribute('data-home-cat'))));
+          renderTaste('cakes');
+        }
+      });
+    </script>
+    <script src="js/bg-video.js" defer></script>
+  </body>
+</html>

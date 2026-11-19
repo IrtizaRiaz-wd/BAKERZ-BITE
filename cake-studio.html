@@ -1,0 +1,474 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cake Studio – Design Your Own Cake | Bakerz Bite</title>
+    <meta name="description" content="Customize your dream celebration cake in our interactive 3D Cake Studio. Choose size, flavor, frosting, colors, toppings and add a custom message." />
+
+    <!-- Dedicated Favicon -->
+    <link rel="icon" type="image/png" href="assets/images/favicon.png" />
+    <link rel="shortcut icon" href="favicon.ico" />
+
+    <!-- Google Fonts: Fredoka, Baloo 2, Nunito -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- Custom Bakery Stylesheets -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/pages.css">
+    <link rel="stylesheet" href="css/responsive.css">
+  </head>
+  <body>
+
+
+    <!-- Reading Progress Bar -->
+    <div id="readingProgressBar"></div>
+
+    <!-- ANNOUNCEMENT BAR -->
+    <div class="announcement-bar">
+      <div class="container-custom d-flex flex-wrap align-items-center justify-content-between gap-2">
+        <div class="ticker-item">
+          <span class="badge bg-danger text-white rounded-pill px-2 py-1 small">FRESH</span>
+          <span>Freshly baked every morning! Free delivery on orders over Rs. 1,500 🎀</span>
+        </div>
+        <div class="d-flex align-items-center gap-3">
+          <div class="announcement-meta-badge d-none d-md-inline-flex align-items-center gap-1">
+            <i class="bi bi-clock-history text-danger"></i>
+            <span class="dynamic-live-clock">Loading live clock...</span>
+          </div>
+          <div class="announcement-meta-badge d-none d-lg-inline-flex align-items-center gap-1">
+            <i class="bi bi-geo-alt-fill text-danger"></i>
+            <span>Main Boulevard, North Nazimabad, Karachi, Pakistan</span>
+          </div>
+          <div class="announcement-meta-badge d-none d-lg-inline-flex align-items-center gap-1">
+            <i class="bi bi-basket2-fill text-warning"></i>
+            <span>Fresh batches baked daily · Open 8:00 AM – 11:30 PM</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- STICKY NAVIGATION BAR -->
+    <header class="bakerz-navbar" id="mainNavbar">
+      <div class="container-custom d-flex align-items-center justify-content-between gap-3">
+
+        <!-- Brand Logo -->
+        <a href="index.html" class="navbar-brand-logo flex-shrink-0" aria-label="Bakerz Bite Homepage">
+          <img src="assets/images/bakerz-bite-logo.webp" alt="Bakerz Bite Artisan Bakery" height="52" />
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav class="d-none d-xl-flex align-items-center gap-1 nav-links-bb">
+          <a href="index.html" class="nav-link-bb">Home</a>
+          <a href="menu.html" class="nav-link-bb">Explore Menu</a>
+          <a href="about.html" class="nav-link-bb">About Us</a>
+          <a href="cake-studio.html" class="nav-link-bb active">Cake Studio</a>
+          <a href="gallery.html" class="nav-link-bb">Gallery</a>
+          <a href="offers.html" class="nav-link-bb">Offers</a>
+          <a href="contact.html" class="nav-link-bb">Contact</a>
+        </nav>
+
+        <!-- Right Side Action Icons -->
+        <div class="d-flex align-items-center gap-2">
+          <button class="nav-action-btn" aria-label="Open Search" onclick="BakerzSearch.open()">
+            <i class="bi bi-search"></i>
+          </button>
+          <a href="login.html" class="nav-action-btn" aria-label="Account Login">
+            <i class="bi bi-person"></i>
+          </a>
+          <a href="dashboard.html#wishlist" class="nav-action-btn position-relative" aria-label="View Wishlist">
+            <i class="bi bi-heart"></i>
+            <span class="badge-pill-count wishlist-count-badge" style="display: none;">0</span>
+          </a>
+          <button class="nav-action-btn position-relative cart-drawer-trigger" aria-label="Open Cart">
+            <i class="bi bi-basket3"></i>
+            <span class="badge-pill-count cart-count-badge" style="display: none;">0</span>
+          </button>
+          <a href="menu.html" class="btn btn-bb btn-bb-primary btn-bb-sm d-none d-sm-inline-flex">
+            Order Now
+          </a>
+          <button class="btn btn-bb btn-bb-outline btn-bb-sm d-xl-none ms-1" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileNavOffcanvas" aria-label="Toggle navigation">
+            <i class="bi bi-list fs-5"></i>
+          </button>
+        </div>
+
+      </div>
+    </header>
+
+    <!-- MOBILE OFFCANVAS NAVIGATION -->
+    <div class="offcanvas offcanvas-end mobile-nav-offcanvas" tabindex="-1" id="mobileNavOffcanvas" aria-labelledby="mobileNavLabel">
+      <div class="mobile-nav-header d-flex justify-content-between align-items-center">
+        <img loading="lazy" decoding="async" src="assets/images/bakerz-bite-logo.webp" alt="Bakerz Bite" height="38" />
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body p-3">
+        <div class="d-flex flex-column gap-1 mb-4">
+          <a href="index.html" class="mobile-nav-link"><span>Home</span> <i class="bi bi-house"></i></a>
+          <a href="menu.html" class="mobile-nav-link"><span>Explore Menu</span> <i class="bi bi-grid"></i></a>
+          <a href="about.html" class="mobile-nav-link"><span>About Us</span> <i class="bi bi-heart"></i></a>
+          <a href="cake-studio.html" class="mobile-nav-link active"><span>Cake Studio</span> <i class="bi bi-stars"></i></a>
+          <a href="gallery.html" class="mobile-nav-link"><span>Sweet Gallery</span> <i class="bi bi-images"></i></a>
+          <a href="offers.html" class="mobile-nav-link"><span>Offers &amp; Bundles</span> <i class="bi bi-tag"></i></a>
+          <a href="contact.html" class="mobile-nav-link"><span>Contact Us</span> <i class="bi bi-envelope"></i></a>
+          <a href="dashboard.html" class="mobile-nav-link"><span>My Dashboard</span> <i class="bi bi-person-circle"></i></a>
+          <a href="cart.html" class="mobile-nav-link"><span>Cart &amp; Checkout</span> <i class="bi bi-basket3"></i></a>
+        </div>
+        <div class="d-grid gap-2">
+          <a href="menu.html" class="btn btn-bb btn-bb-primary">Browse Bakery Menu</a>
+          <button class="btn btn-bb btn-bb-yellow cart-drawer-trigger" data-bs-dismiss="offcanvas">View Basket</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- PAGE HERO BANNER -->
+    <section class="py-4 py-md-5" style="background: linear-gradient(135deg, #FDEBF2 0%, #FFF9E6 100%);">
+      <div class="container-custom text-center">
+        <span class="badge bg-danger text-white rounded-pill px-3 py-1 mb-2">INTERACTIVE CAKE STUDIO</span>
+        <h1 class="display-4 fw-bold brand-font mb-3" style="color: var(--bb-chocolate-dark);">
+          Your Cake. <span style="color: var(--bb-cherry-red);">Your Imagination.</span>
+        </h1>
+        <p class="lead text-muted mb-0" style="max-width: 600px; margin: 0 auto;">
+          Customize every detail in real-time — from tiers and flavors to pastel frosting colors and custom piped messages.
+        </p>
+      </div>
+    </section>
+
+    <!-- MAIN CAKE STUDIO -->
+    <main>
+      <section class="py-5 bg-white" id="cake-studio">
+        <div class="container-custom">
+
+          <div class="row g-5 cake-studio-split">
+
+            <!-- Left Side: Interactive 3D Visual Cake Preview -->
+            <div class="col-lg-6">
+              <div class="cake-studio-canvas-card">
+
+                <div class="cake-preview-container">
+                  <!-- Topper Area -->
+                  <div class="cake-topper-area" id="cakeTopperArea">
+                    <span class="anim-float">🍓</span>
+                  </div>
+
+                  <!-- Tiers Generated Dynamically -->
+                  <div id="cakeVisualPreview" style="display: flex; flex-direction: column; align-items: center;">
+                    <!-- Tier elements rendered by js/cake-studio.js -->
+                  </div>
+
+                  <!-- Custom Piped Text Overlay -->
+                  <div class="cake-piped-message" id="cakePipedMessage">Happy Birthday!</div>
+
+                  <!-- Stand -->
+                  <div class="cake-stand"></div>
+                </div>
+
+                <div class="mt-4 text-center">
+                  <span class="badge bg-white text-dark border px-3 py-1 shadow-sm">
+                    ✨ Live 3D Clay Aesthetic Preview
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right Side: Customization Controls -->
+            <div class="col-lg-6">
+              <div class="clay-card p-4">
+
+                <!-- Step 1: Size -->
+                <div class="mb-4">
+                  <div class="d-flex justify-content-between align-items-center mb-2">
+                    <label class="form-label fw-bold brand-font fs-6 mb-0">1. Choose Cake Size</label>
+                    <span class="badge bg-pink text-dark" id="cakeActiveSizeBadge">1 kg · Serves 8</span>
+                  </div>
+                  <div class="d-flex flex-wrap gap-2" id="cakeSizeButtonGroup">
+                    <button type="button" class="cake-size-pill" data-size="0.5kg">
+                      <i class="bi bi-cake2"></i> 0.5 kg (Bento / Serves 4)
+                    </button>
+                    <button type="button" class="cake-size-pill active" data-size="1kg">
+                      <i class="bi bi-cake2-fill"></i> 1 kg (Classic / Serves 8)
+                    </button>
+                    <button type="button" class="cake-size-pill" data-size="1.5kg">
+                      <i class="bi bi-cake2"></i> 1.5 kg (Family / Serves 12)
+                    </button>
+                    <button type="button" class="cake-size-pill" data-size="2kg">
+                      <i class="bi bi-cake2"></i> 2 kg (2-Tier / Serves 16)
+                    </button>
+                    <button type="button" class="cake-size-pill" data-size="3kg">
+                      <i class="bi bi-cake2"></i> 3 kg (3-Tier / Serves 24)
+                    </button>
+                    <button type="button" class="cake-size-pill" data-size="tier">
+                      <i class="bi bi-stars"></i> 4-Tier Showstopper
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Step 2: Flavor -->
+                <div class="mb-4">
+                  <label for="cakeFlavorSelect" class="form-label fw-bold brand-font fs-6 mb-2">2. Select Sponge Flavor</label>
+                  <select id="cakeFlavorSelect" class="form-select form-select-bb">
+                    <option value="chocolate" selected>🍫 Belgian Dark Chocolate (+Rs. 150)</option>
+                    <option value="vanilla">🍦 Classic Madagascar Vanilla (Included)</option>
+                    <option value="red-velvet">❤️ Red Velvet Dream (+Rs. 250)</option>
+                    <option value="pistachio-rose">🌸 Pistachio Rose (+Rs. 300)</option>
+                    <option value="strawberry-shortcake">🍓 Sweet Wild Strawberry (+Rs. 250)</option>
+                    <option value="salted-caramel">🍯 Salted Butter Caramel (+Rs. 200)</option>
+                    <option value="blueberry-cheesecake">🫐 Wild Blueberry Swirl (+Rs. 250)</option>
+                    <option value="black-forest">🍒 Black Forest Kirsch (+Rs. 250)</option>
+                    <option value="lotus-biscoff">🍪 Biscoff Speculoos Crunch (+Rs. 280)</option>
+                    <option value="tiramisu-espresso">☕ Italian Tiramisu Espresso (+Rs. 260)</option>
+                    <option value="hazelnut-praline">🌰 Roasted Hazelnut Praline (+Rs. 320)</option>
+                    <option value="lemon-raspberry">🍋 Lemon Zest &amp; Raspberry (+Rs. 220)</option>
+                  </select>
+                </div>
+
+                <!-- Step 3: Frosting Style -->
+                <div class="mb-4">
+                  <div class="d-flex justify-content-between align-items-center mb-2">
+                    <label for="cakeFrostingSelect" class="form-label fw-bold brand-font fs-6 mb-0">3. Frosting Type</label>
+                    <span class="badge bg-warning text-dark" id="cakeActiveFrostingBadge">Swiss Meringue Buttercream</span>
+                  </div>
+                  <select id="cakeFrostingSelect" class="form-select form-select-bb">
+                    <option value="buttercream" selected>🧁 Swiss Meringue Buttercream (Silky Smooth)</option>
+                    <option value="whipped-cream">☁️ Light Dairy Whipped Cream (+Rs. 100)</option>
+                    <option value="cream-cheese">🧀 Cream Cheese Velvet (+Rs. 250)</option>
+                    <option value="chocolate-ganache">🍫 Glossy Belgian Chocolate Ganache (+Rs. 300)</option>
+                    <option value="fondant-clay">🎨 Sculpted Pastel Clay Fondant (+Rs. 450)</option>
+                    <option value="naked-rustic">🌾 Modern Semi-Naked Crumb Coat (+Rs. 150)</option>
+                  </select>
+                </div>
+
+                <!-- Step 4: Pastel Frosting Color Palette -->
+                <div class="mb-4">
+                  <div class="d-flex justify-content-between align-items-center mb-2">
+                    <label class="form-label fw-bold brand-font fs-6 mb-0">4. Frosting Color Palette</label>
+                    <span class="small text-muted" id="cakeActiveColorName">Warm Cream</span>
+                  </div>
+                  <div class="d-flex flex-wrap align-items-center gap-2" id="cakeColorPaletteGroup">
+                    <button type="button" class="cake-color-pill active" data-color="#FFF8EC" data-name="Warm Cream" style="background: #FFF8EC;" title="Warm Cream"></button>
+                    <button type="button" class="cake-color-pill" data-color="#F5A6C5" data-name="Strawberry Pink" style="background: #F5A6C5;" title="Strawberry Pink"></button>
+                    <button type="button" class="cake-color-pill" data-color="#FFE5A0" data-name="Butter Yellow" style="background: #FFE5A0;" title="Butter Yellow"></button>
+                    <button type="button" class="cake-color-pill" data-color="#BCE2C1" data-name="Pistachio Green" style="background: #BCE2C1;" title="Pistachio Green"></button>
+                    <button type="button" class="cake-color-pill" data-color="#DCC7F5" data-name="Lavender Milk" style="background: #DCC7F5;" title="Lavender Milk"></button>
+                    <button type="button" class="cake-color-pill" data-color="#FFFFFF" data-name="Snow White" style="background: #FFFFFF;" title="Snow White"></button>
+                    <button type="button" class="cake-color-pill" data-color="#553A36" data-name="Dark Cocoa" data-dark="true" style="background: #553A36;" title="Dark Cocoa"></button>
+                    <button type="button" class="cake-color-pill" data-color="#B3E5FC" data-name="Baby Sky Blue" style="background: #B3E5FC;" title="Baby Sky Blue"></button>
+                    <button type="button" class="cake-color-pill" data-color="#FFCCBC" data-name="Peach Bellini" style="background: #FFCCBC;" title="Peach Bellini"></button>
+                    <button type="button" class="cake-color-pill" data-color="#F48FB1" data-name="Rose Quartz" style="background: #F48FB1;" title="Rose Quartz"></button>
+                    <button type="button" class="cake-color-pill" data-color="#D7995B" data-name="Salted Caramel" data-dark="true" style="background: #D7995B;" title="Salted Caramel"></button>
+                    <button type="button" class="cake-color-pill" data-color="#A8D5BA" data-name="Matcha Green" style="background: #A8D5BA;" title="Matcha Green"></button>
+                  </div>
+                </div>
+
+                <!-- Step 5: Toppings -->
+                <div class="mb-4">
+                  <div class="d-flex justify-content-between align-items-center mb-2">
+                    <label class="form-label fw-bold brand-font fs-6 mb-0">5. Artisan Toppings</label>
+                    <span class="small text-muted" id="cakeToppingCountBadge">2 Selected</span>
+                  </div>
+                  <div class="row g-2">
+                    <div class="col-6">
+                      <label class="form-check small mb-1 p-2 border rounded-3 bg-white w-100 cursor-pointer">
+                        <input class="form-check-input ms-0 me-2" type="checkbox" name="cakeToppings" value="strawberries" checked> 🍓 Fresh Strawberries (+Rs. 200)
+                      </label>
+                    </div>
+                    <div class="col-6">
+                      <label class="form-check small mb-1 p-2 border rounded-3 bg-white w-100 cursor-pointer">
+                        <input class="form-check-input ms-0 me-2" type="checkbox" name="cakeToppings" value="macarons" checked> 🟢 Macarons (+Rs. 350)
+                      </label>
+                    </div>
+                    <div class="col-6">
+                      <label class="form-check small mb-1 p-2 border rounded-3 bg-white w-100 cursor-pointer">
+                        <input class="form-check-input ms-0 me-2" type="checkbox" name="cakeToppings" value="cherries"> 🍒 Glazed Cherries (+Rs. 180)
+                      </label>
+                    </div>
+                    <div class="col-6">
+                      <label class="form-check small mb-1 p-2 border rounded-3 bg-white w-100 cursor-pointer">
+                        <input class="form-check-input ms-0 me-2" type="checkbox" name="cakeToppings" value="blueberries"> 🫐 Wild Blueberries (+Rs. 180)
+                      </label>
+                    </div>
+                    <div class="col-6">
+                      <label class="form-check small mb-1 p-2 border rounded-3 bg-white w-100 cursor-pointer">
+                        <input class="form-check-input ms-0 me-2" type="checkbox" name="cakeToppings" value="chocolate-curls"> 🍫 Choc Curls (+Rs. 150)
+                      </label>
+                    </div>
+                    <div class="col-6">
+                      <label class="form-check small mb-1 p-2 border rounded-3 bg-white w-100 cursor-pointer">
+                        <input class="form-check-input ms-0 me-2" type="checkbox" name="cakeToppings" value="sugar-flowers"> 🌸 Sugar Roses (+Rs. 250)
+                      </label>
+                    </div>
+                    <div class="col-6">
+                      <label class="form-check small mb-1 p-2 border rounded-3 bg-white w-100 cursor-pointer">
+                        <input class="form-check-input ms-0 me-2" type="checkbox" name="cakeToppings" value="sprinkles"> ✨ Pastel Sprinkles (+Rs. 50)
+                      </label>
+                    </div>
+                    <div class="col-6">
+                      <label class="form-check small mb-1 p-2 border rounded-3 bg-white w-100 cursor-pointer">
+                        <input class="form-check-input ms-0 me-2" type="checkbox" name="cakeToppings" value="edible-glitter"> ⭐ Gold Glitter (+Rs. 120)
+                      </label>
+                    </div>
+                    <div class="col-6">
+                      <label class="form-check small mb-1 p-2 border rounded-3 bg-white w-100 cursor-pointer">
+                        <input class="form-check-input ms-0 me-2" type="checkbox" name="cakeToppings" value="crushed-pistachios"> 🥜 Bronte Pistachios (+Rs. 160)
+                      </label>
+                    </div>
+                    <div class="col-6">
+                      <label class="form-check small mb-1 p-2 border rounded-3 bg-white w-100 cursor-pointer">
+                        <input class="form-check-input ms-0 me-2" type="checkbox" name="cakeToppings" value="toffee-crunch"> 🍯 Toffee Crunch (+Rs. 140)
+                      </label>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Step 6: Custom Message -->
+                <div class="mb-4">
+                  <label for="cakeMessageInput" class="form-label fw-bold brand-font fs-6 mb-1">6. Custom Piped Message</label>
+                  <input type="text" id="cakeMessageInput" class="form-control form-control-bb" placeholder="e.g. Happy Birthday Ayesha!" value="Happy Birthday!" maxlength="35">
+                  <div class="form-text small">Max 35 characters piped in custom white chocolate calligraphy.</div>
+                </div>
+
+                <!-- Price & Action Buttons -->
+                <div class="d-flex flex-wrap justify-content-between align-items-center pt-3 border-top">
+                  <div>
+                    <span class="small text-muted d-block">Estimated Total:</span>
+                    <span id="cakePriceTotalDisplay" class="fs-3 fw-bold text-danger brand-font">Rs. 2,450</span>
+                  </div>
+                  <div class="d-flex flex-wrap gap-2 mt-2 mt-sm-0">
+                    <button type="button" id="saveCakeDesignBtn" class="btn btn-bb btn-bb-outline" title="Save to Vault">
+                      <i class="bi bi-bookmark-heart"></i> Save Design
+                    </button>
+                    <button type="button" id="addCustomCakeToCartBtn" class="btn btn-bb btn-bb-primary">
+                      <i class="bi bi-basket3-fill"></i> Add to Basket
+                    </button>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bakerz-footer">
+      <div class="container-custom">
+        <div class="row g-4 mb-5">
+
+          <div class="col-lg-4 col-md-6">
+            <a href="index.html" class="d-inline-block mb-3">
+              <img loading="lazy" decoding="async" src="assets/images/bakerz-bite-logo.webp" alt="Bakerz Bite Logo" height="58" />
+            </a>
+            <p class="small text-white-50 mb-3" style="max-width: 320px;">
+              Bakerz Bite is a playful 3D clay-styled artisan bakery dedicated to turning simple natural ingredients into extraordinary moments of sweetness.
+            </p>
+            <div class="d-flex gap-2 footer-socials">
+              <a href="https://instagram.com/bakerzbite" target="_blank" rel="noopener noreferrer" class="footer-social-icon" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+              <a href="https://facebook.com/bakerzbite" target="_blank" rel="noopener noreferrer" class="footer-social-icon" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+              <a href="https://tiktok.com/@bakerzbite" target="_blank" rel="noopener noreferrer" class="footer-social-icon" aria-label="TikTok"><i class="bi bi-tiktok"></i></a>
+              <a href="https://wa.me/924235789922" target="_blank" rel="noopener noreferrer" class="footer-social-icon" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-md-6 col-6">
+            <h5 class="brand-font mb-3">Quick Links</h5>
+            <ul class="list-unstyled small d-flex flex-column gap-2 mb-0">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="menu.html">Explore Menu</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="cake-studio.html">Cake Studio</a></li>
+              <li><a href="gallery.html">Sweet Gallery</a></li>
+              <li><a href="offers.html">Offers &amp; Deals</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 col-6">
+            <h5 class="brand-font mb-3">Bakery Categories</h5>
+            <ul class="list-unstyled small d-flex flex-column gap-2 mb-0">
+              <li><a href="menu.html?category=breads">Breads &amp; Artisan Loaves</a></li>
+              <li><a href="menu.html?category=cakes">Cakes &amp; Gateaux</a></li>
+              <li><a href="menu.html?category=cookies">Handcrafted Cookies</a></li>
+              <li><a href="menu.html?category=pastries">Croissants &amp; Viennoiserie</a></li>
+              <li><a href="menu.html?category=pies">Gourmet Pies &amp; Tarts</a></li>
+              <li><a href="menu.html?category=savory">Savory &amp; Snack Items</a></li>
+              <li><a href="menu.html?category=essentials">Everyday Essentials &amp; Rusks</a></li>
+              <li><a href="menu.html?category=merchandise">Bakery Merchandise</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <h5 class="brand-font mb-3">Bakery Hearth</h5>
+            <ul class="list-unstyled small text-white-50 d-flex flex-column gap-2 mb-3">
+              <li><i class="bi bi-geo-alt text-danger me-2"></i>Main Boulevard, North Nazimabad, Karachi</li>
+              <li><i class="bi bi-telephone text-warning me-2"></i>0302 2669408</li>
+              <li><i class="bi bi-envelope text-info me-2"></i>irtizariazreal@gmail.com</li>
+              <li><i class="bi bi-clock text-success me-2"></i>8:00 AM – 11:30 PM Daily</li>
+            </ul>
+          </div>
+
+        </div>
+        <div class="pt-4 border-top border-secondary border-opacity-25 d-flex flex-wrap justify-content-between align-items-center gap-2 small text-white-50">
+          <div>© 2026 Bakerz Bite Patisserie. All rights reserved.</div>
+          <div class="d-flex gap-3">
+            <a href="faq.html" class="text-white-50">FAQ</a>
+            <a href="contact.html" class="text-white-50">Contact</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- SLIDE-OVER CART DRAWER -->
+    <div class="cart-drawer-overlay" id="cartDrawerOverlay"></div>
+    <div class="cart-drawer" id="cartDrawer" aria-labelledby="cartDrawerTitle" role="dialog" aria-modal="true">
+      <div class="cart-drawer-header">
+        <h5 class="brand-font mb-0" id="cartDrawerTitle">
+          <i class="bi bi-basket3-fill text-danger me-2"></i>Your Sweet Basket
+        </h5>
+        <button type="button" class="btn-close" id="cartDrawerCloseBtn" aria-label="Close Basket"></button>
+      </div>
+      <div class="cart-drawer-body" id="cartDrawerItems"></div>
+      <div class="cart-drawer-footer" id="cartDrawerSummary"></div>
+    </div>
+
+    <!-- GLOBAL QUICK SEARCH MODAL -->
+    <div class="modal fade" id="globalSearchModal" tabindex="-1" aria-labelledby="globalSearchModalTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content bb-modal-content">
+          <div class="modal-header bb-modal-header">
+            <h5 class="modal-title brand-font" id="globalSearchModalTitle">Search Bakerz Bite</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body bb-modal-body">
+            <div class="bb-search-row mb-3">
+              <button type="button" class="bb-search-icon" aria-label="Search" onclick="document.getElementById('globalSearchInput').focus()">
+                <i class="bi bi-search"></i>
+              </button>
+              <input type="text" id="globalSearchInput" class="form-control form-control-bb" aria-label="Search the bakery menu" placeholder="Search menu by name or category..." oninput="BakerzSearch.handleSearchInput(this.value)">
+            </div>
+            <div id="globalSearchResults"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap 5 Bundle JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Bakerz Bite Core JS Modules -->
+    <script src="js/products.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/wishlist.js"></script>
+    <script src="js/cake-studio.js"></script>
+    <script src="js/forms.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

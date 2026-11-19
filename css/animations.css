@@ -1,0 +1,153 @@
+/**
+ * Bakerz Bite - Animation System
+ * Playful, smooth, performance-conscious CSS animations
+ */
+
+/* Keyframes */
+@keyframes marqueeScroll {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes megaMenuSlideDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes floatSlow {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-12px) rotate(3deg);
+  }
+}
+
+@keyframes floatReverse {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(10px) rotate(-4deg);
+  }
+}
+
+@keyframes gentlePulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.08);
+  }
+}
+
+@keyframes toastEntrance {
+  0% {
+    opacity: 0;
+    transform: translateY(20px) scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes popBadge {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.35); }
+  100% { transform: scale(1); }
+}
+
+@keyframes sprinkleDrift {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 0.8;
+  }
+  50% {
+    transform: translateY(-20px) rotate(180deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0) rotate(360deg);
+    opacity: 0.8;
+  }
+}
+
+/* Utility Animation Classes */
+.anim-float {
+  animation: floatSlow 4.5s ease-in-out infinite;
+}
+
+.anim-float-reverse {
+  animation: floatReverse 5s ease-in-out infinite;
+}
+
+.anim-pulse {
+  animation: gentlePulse 2.8s ease-in-out infinite;
+}
+
+.badge-pop {
+  animation: popBadge 0.35s ease-out;
+}
+
+.clay-sticker {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: white;
+  border: 2px solid var(--bb-chocolate-dark);
+  border-radius: var(--radius-pill);
+  padding: 6px 16px;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.85rem;
+  box-shadow: 0 4px 0 var(--bb-chocolate-dark);
+  user-select: none;
+}
+
+.clay-sticker-pink {
+  background: var(--bb-strawberry-soft);
+  color: var(--bb-strawberry-dark);
+}
+
+.clay-sticker-yellow {
+  background: var(--bb-butter-soft);
+  color: #B38600;
+}
+
+.clay-sticker-green {
+  background: var(--bb-pistachio-soft);
+  color: #387A41;
+}
+
+/* Fade up on scroll utility */
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal-on-scroll.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Reduced Motion Override */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .marquee-content {
+    animation: none;
+    overflow-x: auto;
+  }
+}

@@ -1,0 +1,332 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us - Bakerz Bite Bakery</title>
+    <meta name="description" content="Get in touch with Bakerz Bite bakery in North Nazimabad, Karachi." />
+    <link rel="icon" type="image/png" href="assets/images/favicon.png" />
+    <link rel="shortcut icon" href="favicon.ico" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/pages.css">
+    <link rel="stylesheet" href="css/responsive.css">
+  </head>
+  <body>
+
+    <div id="readingProgressBar"></div>
+
+    <div class="announcement-bar">
+      <div class="container-custom d-flex flex-wrap align-items-center justify-content-between gap-2">
+        <div class="ticker-item">
+          <span class="badge bg-danger text-white rounded-pill px-2 py-1 small">CONTACT</span>
+          <span>We'd love to hear from you! Custom orders and catering available 🍓</span>
+        </div>
+        <div class="d-flex align-items-center gap-3">
+          <div class="announcement-meta-badge d-none d-md-inline-flex align-items-center gap-1">
+            <i class="bi bi-clock-history text-danger"></i>
+            <span class="dynamic-live-clock">Loading live clock...</span>
+          </div>
+          <div class="announcement-meta-badge d-inline-flex align-items-center gap-1">
+            <i class="bi bi-basket2-fill text-danger"></i>
+            <span>Fresh batches baked daily · Open 8:00 AM – 11:30 PM</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <header class="bakerz-navbar">
+      <div class="container-custom d-flex align-items-center justify-content-between">
+        <a href="index.html" class="navbar-brand-logo" aria-label="Bakerz Bite Homepage">
+          <img src="assets/images/bakerz-bite-logo.webp" alt="Bakerz Bite Logo" height="52" />
+        </a>
+
+        <nav class="d-none d-xl-flex align-items-center gap-1 navbar-nav-desktop">
+          <a href="index.html" class="nav-link-bb">Home</a>
+          <!-- Explore Menu with Mega Dropdown -->
+          <div class="mega-menu-wrapper">
+            <a href="menu.html" class="nav-link-bb d-flex align-items-center gap-1">
+              Explore Menu <i class="bi bi-chevron-down small"></i>
+            </a>
+            <div class="mega-dropdown-menu">
+              <div class="mega-grid">
+                <a href="menu.html?category=breads" class="mega-card bg-bread">
+                  <div class="mega-card-img position-relative overflow-hidden">
+                    <img loading="lazy" decoding="async" src="assets/images/categories/thumbs/category-breads.webp" alt="Breads & Loaves" onerror="this.style.display='none'; if (this.nextElementSibling) this.nextElementSibling.style.display='flex';" />
+                    <span style="display: none; width: 100%; height: 100%; align-items: center; justify-content: center; font-size: 1.8rem;">🍞</span>
+                  </div>
+                  <div class="mega-card-body">
+                    <h6 class="brand-font mb-1 text-dark">Breads & Loaves</h6>
+                    <p class="mb-0">Sourdough, rustic baguettes & wheat.</p>
+                  </div>
+                </a>
+                <a href="menu.html?category=cakes" class="mega-card bg-cake">
+                  <div class="mega-card-img position-relative overflow-hidden">
+                    <img loading="lazy" decoding="async" src="assets/images/categories/thumbs/category-cakes.webp" alt="Cakes & Gateaux" onerror="this.style.display='none'; if (this.nextElementSibling) this.nextElementSibling.style.display='flex';" />
+                    <span style="display: none; width: 100%; height: 100%; align-items: center; justify-content: center; font-size: 1.8rem;">🎂</span>
+                  </div>
+                  <div class="mega-card-body">
+                    <h6 class="brand-font mb-1 text-dark">Cakes & Gateaux</h6>
+                    <p class="mb-0">Fudge, fresh cream & celebration cakes.</p>
+                  </div>
+                </a>
+                <a href="menu.html?category=pastries" class="mega-card bg-pastry">
+                  <div class="mega-card-img position-relative overflow-hidden">
+                    <img loading="lazy" decoding="async" src="assets/images/categories/thumbs/category-pastries.webp" alt="Pastries & Sweets" onerror="this.style.display='none'; if (this.nextElementSibling) this.nextElementSibling.style.display='flex';" />
+                    <span style="display: none; width: 100%; height: 100%; align-items: center; justify-content: center; font-size: 1.8rem;">🥐</span>
+                  </div>
+                  <div class="mega-card-body">
+                    <h6 class="brand-font mb-1 text-dark">Pastries & Sweets</h6>
+                    <p class="mb-0">27-layer croissants, tarts & rolls.</p>
+                  </div>
+                </a>
+                <a href="menu.html?category=savory" class="mega-card bg-savory">
+                  <div class="mega-card-img position-relative overflow-hidden">
+                    <img loading="lazy" decoding="async" src="assets/images/categories/thumbs/category-savory.webp" alt="Savory & Snacks" onerror="this.style.display='none'; if (this.nextElementSibling) this.nextElementSibling.style.display='flex';" />
+                    <span style="display: none; width: 100%; height: 100%; align-items: center; justify-content: center; font-size: 1.8rem;">🥟</span>
+                  </div>
+                  <div class="mega-card-body">
+                    <h6 class="brand-font mb-1 text-dark">Savory & Snacks</h6>
+                    <p class="mb-0">Chicken patties, puffs & garlic twists.</p>
+                  </div>
+                </a>
+                <a href="menu.html?category=essentials" class="mega-card bg-essential">
+                  <div class="mega-card-img position-relative overflow-hidden">
+                    <img loading="lazy" decoding="async" src="assets/images/categories/thumbs/category-essentials.webp" alt="Everyday Essentials" onerror="this.style.display='none'; if (this.nextElementSibling) this.nextElementSibling.style.display='flex';" />
+                    <span style="display: none; width: 100%; height: 100%; align-items: center; justify-content: center; font-size: 1.8rem;">🧇</span>
+                  </div>
+                  <div class="mega-card-body">
+                    <h6 class="brand-font mb-1 text-dark">Everyday Essentials</h6>
+                    <p class="mb-0">Tea rusks, burger buns & dinner rolls.</p>
+                  </div>
+                </a>
+                <a href="menu.html" class="mega-card mega-card-highlight">
+                  <div class="mega-card-body">
+                    <div class="d-flex align-items-center gap-1 text-danger small fw-bold mb-1">
+                      <i class="bi bi-stars"></i>
+                      <span data-product-count>All 51 Baked Delights</span>
+                    </div>
+                    <h6 class="brand-font mb-1 text-dark">Full Artisan Menu</h6>
+                    <p class="mb-0 text-danger fw-semibold">Browse full catalog →</p>
+                  </div>
+                </a>
+              </div>
+              <div class="mt-3 pt-2 border-top d-flex justify-content-between align-items-center">
+                <span class="small text-muted"><i class="bi bi-clock-history me-1 text-danger"></i>Fresh stone hearth batches baked daily.</span>
+                <a href="menu.html" class="small fw-bold text-danger text-decoration-none">Explore All Items →</a>
+              </div>
+            </div>
+          </div>
+          <a href="about.html" class="nav-link-bb">About Us</a>
+          <a href="cake-studio.html" class="nav-link-bb">Cake Studio</a>
+          <a href="gallery.html" class="nav-link-bb">Gallery</a>
+          <a href="offers.html" class="nav-link-bb">Offers</a>
+          <a href="contact.html" class="nav-link-bb active">Contact</a>
+        </nav>
+
+        <div class="d-flex align-items-center gap-2">
+          <button class="nav-action-btn" aria-label="Search" onclick="BakerzSearch.open()"><i class="bi bi-search"></i></button>
+          <a href="login.html" class="nav-action-btn" aria-label="Account"><i class="bi bi-person"></i></a>
+          <a href="dashboard.html#wishlist" class="nav-action-btn position-relative" aria-label="Wishlist">
+            <i class="bi bi-heart"></i>
+            <span class="badge-pill-count wishlist-count-badge" style="display: none;">0</span>
+          </a>
+          <button class="nav-action-btn position-relative cart-drawer-trigger" aria-label="Cart">
+            <i class="bi bi-basket3"></i>
+            <span class="badge-pill-count cart-count-badge" style="display: none;">0</span>
+          </button>
+          <a href="menu.html" class="btn btn-bb btn-bb-primary btn-bb-sm d-none d-sm-inline-flex">Order Now</a>
+          <button class="btn btn-bb btn-bb-outline btn-bb-sm d-xl-none ms-1" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileNavOffcanvas" aria-controls="mobileNavOffcanvas" aria-label="Toggle navigation"><i class="bi bi-list fs-5"></i></button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Page Header Banner -->
+    <section class="py-5 text-center" style="background: radial-gradient(circle at center, #EFF8F0 0%, var(--bb-cream) 100%);">
+      <div class="container-custom">
+        <span class="badge bg-danger text-white rounded-pill px-3 py-1 mb-2">WE'RE HERE FOR YOU</span>
+        <h1 class="display-4 fw-bold brand-font mb-2">Get In Touch</h1>
+        <p class="text-muted" style="max-width: 600px; margin: 0 auto;">
+          Have questions about celebration cake orders, event catering, or dietary requirements? Drop us a note!
+        </p>
+      </div>
+    </section>
+
+    <!-- Contact Form & Info Columns -->
+    <main class="py-5 bg-white">
+      <div class="container-custom">
+        <div class="row g-5">
+          
+          <!-- Left: Contact Details & Store Info -->
+          <div class="col-lg-5">
+            <div class="clay-card p-4 h-100" style="background: var(--bb-cream);">
+              <h3 class="brand-font mb-3">Bakery Information</h3>
+              <p class="text-muted small mb-4">
+                Visit our physical bakery shop or reach out directly to our patisserie team.
+              </p>
+
+              <div class="d-flex align-items-start gap-3 mb-3">
+                <div class="fs-4 text-danger">📍</div>
+                <div>
+                  <h6 class="brand-font mb-1">Flagship Hearth Location</h6>
+                  <p class="small text-muted mb-0 bakery-location-display">Main Boulevard, North Nazimabad, Karachi, Pakistan</p>
+                </div>
+              </div>
+
+              <div class="d-flex align-items-start gap-3 mb-3">
+                <div class="fs-4 text-warning">📞</div>
+                <div>
+                  <h6 class="brand-font mb-1">Phone & WhatsApp</h6>
+                  <p class="small text-muted mb-0 bakery-phone-display">0302 2669408</p>
+                  <small class="text-muted">Direct line for custom wedding cakes</small>
+                </div>
+              </div>
+
+              <div class="d-flex align-items-start gap-3 mb-3">
+                <div class="fs-4 text-info">✉️</div>
+                <div>
+                  <h6 class="brand-font mb-1">Email Inquiries</h6>
+                  <p class="small text-muted mb-0">irtizariazreal@gmail.com</p>
+                  <small class="text-muted">We reply within 2 business hours</small>
+                </div>
+              </div>
+
+              <div class="d-flex align-items-start gap-3 mb-4">
+                <div class="fs-4 text-success">⏰</div>
+                <div>
+                  <h6 class="brand-font mb-1">Baking & Opening Hours</h6>
+                  <p class="small text-muted mb-0 bakery-hours-display">Monday – Sunday: 8:00 AM – 11:30 PM</p>
+                  <small class="text-muted">Oven fresh batches: 8:00 AM & 3:30 PM</small>
+                </div>
+              </div>
+
+              <!-- Live Interactive Map -->
+              <div class="p-3 rounded-3 border" style="background: var(--bb-cream);">
+                <h6 class="brand-font mb-2"><i class="bi bi-pin-map-fill text-danger me-1"></i>Find Our Flagship</h6>
+                <div class="bb-map-frame">
+                  <iframe
+                    src="https://www.openstreetmap.org/export/embed.html?bbox=67.0385%2C24.9355%2C67.0570%2C24.9495&amp;layer=mapnik&amp;marker=24.94246%2C67.04772"
+                    title="Live interactive map of Bakerz Bite flagship at Main Boulevard, North Nazimabad, Karachi"
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                    allowfullscreen></iframe>
+                </div>
+                <div class="d-flex flex-wrap align-items-center justify-content-between gap-2 mt-2">
+                  <small class="text-muted">Drag to explore · scroll to zoom</small>
+                  <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Main+Boulevard%2C+North+Nazimabad%2C+Karachi" target="_blank" rel="noopener" class="btn btn-bb btn-bb-primary btn-bb-sm">
+                    <i class="bi bi-signpost-2 me-1"></i>Get Directions
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Validated Contact Form -->
+          <div class="col-lg-7">
+            <div class="clay-card p-4 p-md-5">
+              <h3 class="brand-font mb-2">Send Us a Message</h3>
+              <p class="text-muted small mb-4">Fill out the form below. Inquiries are handled locally in demo mode.</p>
+
+              <form id="contactUsForm">
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <label class="form-label small fw-bold" for="contactName">Your Full Name *</label>
+                    <input type="text" id="contactName" name="name" class="form-control form-control-bb" placeholder="e.g. Ayesha Khan" autocomplete="name" required>
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label small fw-bold" for="contactEmail">Email Address *</label>
+                    <input type="email" id="contactEmail" name="email" class="form-control form-control-bb" placeholder="e.g. ayesha@example.com" autocomplete="email" required>
+                  </div>
+                  <div class="col-12">
+                    <label class="form-label small fw-bold" for="contactSubject">Subject / Inquiry Type</label>
+                    <select id="contactSubject" class="form-select form-select-bb" name="subject">
+                      <option>General Bakery Inquiry</option>
+                      <option>Custom Celebration Cake</option>
+                      <option>Bulk / Corporate Catering</option>
+                      <option>Feedback or Suggestion</option>
+                    </select>
+                  </div>
+                  <div class="col-12">
+                    <label class="form-label small fw-bold" for="contactMessage">Your Message *</label>
+                    <textarea id="contactMessage" name="message" class="form-control form-control-bb" rows="5" placeholder="Tell us how we can make your sweet moments even more delightful..." required></textarea>
+                  </div>
+                  <div class="col-12">
+                    <button type="submit" class="btn btn-bb btn-bb-primary w-100 py-3">
+                      <i class="bi bi-send-fill me-2"></i> Send Sweet Message
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bakerz-footer">
+      <div class="container-custom text-center text-white-50 small">
+        <a href="index.html" class="d-inline-block mb-3">
+          <img loading="lazy" decoding="async" src="assets/images/bakerz-bite-logo.webp" alt="Bakerz Bite Logo" height="52" />
+        </a>
+        <p class="mb-3">Bakerz Bite Patisserie · Handcrafted Daily · Karachi Flagship</p>
+        <div class="d-flex justify-content-center gap-3">
+          <a href="index.html" class="text-white-50">Home</a>
+          <a href="menu.html" class="text-white-50">Menu</a>
+          <a href="offers.html" class="text-white-50">Offers</a>
+          <a href="faq.html" class="text-white-50">FAQ</a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Cart Drawer -->
+    <div class="cart-drawer-overlay" id="cartDrawerOverlay"></div>
+    <div class="cart-drawer" id="cartDrawer">
+      <div class="cart-drawer-header">
+        <h5 class="brand-font mb-0"><i class="bi bi-basket3-fill text-danger me-2"></i>Your Sweet Basket</h5>
+        <button type="button" class="btn-close" id="cartDrawerCloseBtn" aria-label="Close basket"></button>
+      </div>
+      <div class="cart-drawer-body" id="cartDrawerItems"></div>
+      <div class="cart-drawer-footer" id="cartDrawerSummary"></div>
+    </div>
+
+    <!-- GLOBAL SEARCH MODAL -->
+    <div class="modal fade" id="globalSearchModal" tabindex="-1" aria-labelledby="globalSearchModalTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content bb-modal-content">
+          <div class="modal-header bb-modal-header">
+            <h5 class="modal-title brand-font" id="globalSearchModalTitle">Search Bakerz Bite</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body bb-modal-body">
+            <div class="bb-search-row mb-3">
+              <button type="button" class="bb-search-icon" aria-label="Search" onclick="document.getElementById('globalSearchInput').focus()">
+                <i class="bi bi-search"></i>
+              </button>
+              <input type="text" id="globalSearchInput" class="form-control form-control-bb" aria-label="Search the bakery menu" placeholder="Search menu by name or category..." oninput="BakerzSearch.handleSearchInput(this.value)">
+            </div>
+            <div id="globalSearchResults"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/products.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/wishlist.js"></script>
+    <script src="js/forms.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

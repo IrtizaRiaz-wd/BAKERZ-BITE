@@ -1,0 +1,6 @@
+notefordev/
+*.zip
+_qa_*
+Thumbs.db
+desktop.ini
+.DS_Store

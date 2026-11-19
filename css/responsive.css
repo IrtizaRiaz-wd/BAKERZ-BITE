@@ -1,0 +1,314 @@
+/**
+ * Bakerz Bite - Responsive Stylesheet
+ * Responsive behavior across mobile, tablet, laptop, and ultra-wide
+ */
+
+/* Mobile Offcanvas Drawer */
+.offcanvas.mobile-nav-offcanvas {
+  background-color: var(--bb-cream);
+  border-left: 3px solid rgba(85, 58, 54, 0.12);
+  width: 320px;
+  max-width: 85vw;
+}
+
+.mobile-nav-header {
+  padding: 16px 20px;
+  background: white;
+  border-bottom: 2px solid rgba(85, 58, 54, 0.08);
+}
+
+.mobile-nav-link {
+  font-family: var(--font-secondary);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--bb-chocolate-brown);
+  padding: 12px 18px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: var(--transition-smooth);
+}
+
+.mobile-nav-link:hover, .mobile-nav-link.active {
+  background: var(--bb-strawberry-soft);
+  color: var(--bb-cherry-red);
+}
+
+/* Tablet (max-width: 991.98px) */
+@media (max-width: 991.98px) {
+  .hero-title-main {
+    font-size: 2.8rem !important;
+  }
+  
+  .navbar-nav-desktop {
+    display: none !important;
+  }
+  
+  .bakerz-navbar {
+    padding: 10px 0;
+    /* A 98%-opaque header makes the blur invisible; skipping it keeps phone scrolling smooth */
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    background-color: rgba(255, 248, 236, 0.98);
+  }
+  
+  .cart-drawer {
+    width: 100vw;
+  }
+
+  .cake-studio-split {
+    flex-direction: column;
+  }
+}
+
+/* Mobile (max-width: 767.98px) */
+@media (max-width: 767.98px) {
+  .hero-title-main {
+    font-size: 2.2rem !important;
+    line-height: 1.15;
+  }
+
+  .hero-badge-pill {
+    font-size: 0.78rem;
+  }
+
+  .category-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 12px;
+  }
+
+  .product-grid {
+    grid-template-columns: repeat(1, 1fr) !important;
+  }
+
+  .announcement-bar {
+    font-size: 0.78rem;
+    padding: 6px 10px;
+  }
+
+  .announcement-meta-badge {
+    display: none;
+  }
+
+  .btn-bb {
+    padding: 10px 20px;
+    font-size: 0.95rem;
+  }
+
+  .clay-card {
+    padding: 18px;
+  }
+
+  .bakerz-footer {
+    padding-top: 40px;
+    text-align: center;
+  }
+
+  .bakerz-footer .footer-socials {
+    justify-content: center;
+  }
+
+  /* 15% Mobile Sticky Cap rule enforcement */
+  .bakerz-navbar {
+    max-height: 64px;
+  }
+  
+  .navbar-brand-logo img {
+    height: 40px;
+  }
+}
+
+/* Phones: compact catalog filter toolbar (menu page) */
+@media (max-width: 767.98px) {
+  .catalog-toolbar {
+    padding: 14px !important;
+  }
+
+  .catalog-toolbar .row {
+    --bs-gutter-y: 0.55rem;
+  }
+
+  .catalog-toolbar .form-range {
+    margin-bottom: 0;
+  }
+
+  .catalog-pills {
+    flex-wrap: nowrap !important;
+    justify-content: flex-start !important;
+    overflow-x: auto;
+    scroll-snap-type: x proximity;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+    padding: 10px 0 2px !important;
+    margin-top: 10px !important;
+  }
+
+  .catalog-pills::-webkit-scrollbar {
+    display: none;
+  }
+
+  .catalog-pills .btn {
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+  }
+}
+
+/* Two product columns on wider phones, single column below 360px */
+@media (min-width: 360px) and (max-width: 767.98px) {
+  .row.product-grid.g-4 {
+    --bs-gutter-x: 1rem;
+    --bs-gutter-y: 1rem;
+  }
+
+  .product-grid > .col-12.col-md-6 {
+    flex: 0 0 auto;
+    width: 50%;
+  }
+
+  .product-card {
+    padding: 10px;
+  }
+
+  .product-badge-category {
+    top: 18px;
+    left: 18px;
+    max-width: calc(100% - 62px);
+    padding: 3px 8px;
+    font-size: 0.62rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .product-wishlist-btn {
+    top: 18px;
+    right: 18px;
+    width: 30px;
+    height: 30px;
+    font-size: 0.85rem;
+  }
+
+  .product-img-wrapper {
+    height: 130px !important;
+  }
+
+  .product-card-body {
+    padding-top: 10px;
+  }
+
+  .product-title {
+    font-size: 0.95rem;
+    margin-bottom: 3px;
+  }
+
+  .product-desc {
+    font-size: 0.78rem;
+    margin-bottom: 8px;
+  }
+
+  .product-rating {
+    font-size: 0.74rem;
+    margin-bottom: 6px;
+  }
+
+  .product-rating .review-count {
+    display: none;
+  }
+
+  .product-footer {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+  }
+
+  .product-price {
+    font-size: 1.05rem;
+  }
+
+  .product-card-actions {
+    justify-content: space-between;
+  }
+
+  .product-card-actions .btn-bb-sm {
+    padding: 6px 10px;
+    font-size: 0.8rem;
+  }
+}
+
+/* Small mobile (max-width: 480px) */
+@media (max-width: 480px) {
+  .category-grid {
+    grid-template-columns: 1fr !important;
+  }
+  
+  .hero-title-main {
+    font-size: 1.85rem !important;
+  }
+
+  /* Header actions: full-size tap targets with tight, even spacing */
+  .bakerz-navbar .container-custom > .d-flex:last-child {
+    gap: 0.3rem !important;
+  }
+
+  .nav-action-btn {
+    width: 44px;
+    height: 44px;
+    font-size: 1.15rem;
+  }
+
+  .bakerz-navbar .container-custom > .d-flex:last-child > .btn-bb-sm {
+    padding: 8px 12px;
+  }
+
+  .bakerz-navbar .container-custom > .d-flex:last-child > .ms-1 {
+    margin-left: 0 !important;
+  }
+
+  /* Square hamburger keeps the action row visually even with the icon circles */
+  .bakerz-navbar .container-custom > .d-flex:last-child > .d-xl-none {
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+/* Cake Studio: once the action buttons drop below the price, give both equal width */
+@media (max-width: 575.98px) {
+  .cake-studio-split .border-top > .d-flex:last-child {
+    width: 100%;
+  }
+
+  .cake-studio-split .border-top > .d-flex:last-child > .btn {
+    flex: 1 1 100%;
+  }
+}
+
+@media (max-width: 359.98px) {
+  /* Account and wishlist stay reachable from the mobile menu at extreme widths */
+  .bakerz-navbar .container-custom > .d-flex:last-child > a[href="login.html"],
+  .bakerz-navbar .container-custom > .d-flex:last-child > a[href="dashboard.html#wishlist"] {
+    display: none !important;
+  }
+
+  /* Checkout header: keep the logo and back button within the viewport */
+  .bakerz-navbar .container-custom > .d-flex:last-child > .badge {
+    display: none !important;
+  }
+
+  .row.product-grid.g-4 {
+    --bs-gutter-x: 1rem;
+    --bs-gutter-y: 1rem;
+  }
+}
+
+/* g-5 rows use 3rem gutters, which exceed the 20px container padding and
+   create a 4px horizontal overflow on viewports narrower than the container */
+@media (max-width: 1299.98px) {
+  .row.g-5 {
+    --bs-gutter-x: 2.5rem;
+  }
+}

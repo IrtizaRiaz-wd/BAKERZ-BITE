@@ -31,6 +31,8 @@
     <link rel="stylesheet" href="css/animations.css">
     <link rel="stylesheet" href="css/pages.css">
     <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/merchandise.css">
+    <link rel="stylesheet" href="css/site-features.css">
   </head>
   <body>
     <!-- Reading Progress Bar -->
@@ -155,7 +157,10 @@
               
               <div class="mt-3 pt-2 border-top d-flex justify-content-between align-items-center">
                 <span class="small text-muted"><i class="bi bi-clock-history me-1 text-danger"></i>Fresh stone hearth batches baked daily with unbleached flours.</span>
-                <a href="menu.html" class="small fw-bold text-danger text-decoration-none">Explore All Items →</a>
+                <div class="d-flex flex-wrap gap-3">
+                  <a href="merchandise.html" class="small fw-bold text-danger text-decoration-none">The Collection →</a>
+                  <a href="menu.html" class="small fw-bold text-danger text-decoration-none">Explore All Items →</a>
+                </div>
               </div>
             </div>
           </div>
@@ -523,6 +528,48 @@
         </div>
       </section>
 
+      <!-- SECTION 07B: THE BAKERZ BITE COLLECTION -->
+      <section class="bb-collection-teaser py-5" id="the-collection">
+        <div class="container-custom">
+          <div class="row align-items-center g-5">
+            <div class="col-lg-6">
+              <span class="bb-collection-kicker"><i class="bi bi-stars"></i> The Bakerz Bite Collection</span>
+              <h2 class="display-5 fw-bold brand-font mt-3 mb-2">Take a little sweetness home with you.</h2>
+              <p class="text-muted mb-4" style="max-width: 520px;">
+                A small, thoughtfully made line of bakery merchandise &mdash; soft pinks, honest materials, and our wheat-sprig crest.
+                Find a mug for slow mornings, a tote for bread runs, or a tray worthy of the cake you baked.
+              </p>
+              <ul class="bb-collection-list">
+                <li><i class="bi bi-cup-hot"></i> Drinkware</li>
+                <li><i class="bi bi-bag"></i> Canvas totes</li>
+                <li><i class="bi bi-gift"></i> Gift-ready packaging</li>
+                <li><i class="bi bi-layers"></i> Serving trays</li>
+              </ul>
+              <div class="d-flex flex-wrap gap-2">
+                <a href="merchandise.html" class="btn btn-bb btn-bb-primary">Explore the Collection <i class="bi bi-arrow-right"></i></a>
+                <a href="merchandise.html?sub=drinkware" class="btn btn-bb btn-bb-outline">Shop Drinkware</a>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="bb-collection-collage">
+                <a class="bb-collection-tile" href="merchandise.html?sub=drinkware">
+                  <img src="assets/images/merchandise/bakerz-ceramic-mug.webp" alt="Bakerz Classic Ceramic Mug" width="800" height="800" loading="lazy" decoding="async" />
+                </a>
+                <a class="bb-collection-tile tile-offset" href="merchandise.html?sub=bags">
+                  <img src="assets/images/merchandise/bakerz-canvas-bag.webp" alt="Pink Canvas Tote Bag" width="800" height="800" loading="lazy" decoding="async" />
+                </a>
+                <a class="bb-collection-tile" href="merchandise.html?sub=bags">
+                  <img src="assets/images/merchandise/bakerz-gift-bag.webp" alt="Signature Paper Gift Bag" width="800" height="800" loading="lazy" decoding="async" />
+                </a>
+                <a class="bb-collection-tile tile-offset" href="merchandise.html?sub=serving">
+                  <img src="assets/images/merchandise/bakerz-wooden-tray.webp" alt="Oak Wooden Serving Tray" width="800" height="800" loading="lazy" decoding="async" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <!-- SECTION 08: SPECIAL OFFERS & BUNDLES -->
       <section class="py-5" id="sweet-promotions" style="background: linear-gradient(180deg, #FDEBF2 0%, var(--bb-cream) 100%);">
         <div class="container-custom">
@@ -870,6 +917,11 @@
               <span class="carousel-control-next-icon bg-dark rounded-circle p-2" aria-hidden="true"></span>
             </button>
           </div>
+
+          <div class="d-flex flex-wrap justify-content-center gap-2 mt-4">
+            <a href="reviews.html" class="btn btn-bb btn-bb-outline">Read Guest Reviews</a>
+            <a href="reviews.html#reviewForm" class="btn btn-bb btn-bb-primary">Share Your Experience</a>
+          </div>
         </div>
       </section>
 
@@ -998,6 +1050,7 @@
               <li><a href="gallery.html">Sweet Gallery</a></li>
               <li><a href="offers.html">Offers & Deals</a></li>
               <li><a href="contact.html">Contact Us</a></li>
+              <li><a href="reviews.html">Guest Reviews</a></li>
             </ul>
           </div>
 
@@ -1012,7 +1065,7 @@
               <li><a href="menu.html?category=pies">Gourmet Pies & Tarts</a></li>
               <li><a href="menu.html?category=savory">Savory & Snack Items</a></li>
               <li><a href="menu.html?category=essentials">Everyday Essentials & Rusks</a></li>
-              <li><a href="menu.html?category=merchandise">Bakery Merchandise</a></li>
+              <li><a href="merchandise.html">The Bakerz Bite Collection</a></li>
             </ul>
           </div>
 
@@ -1293,5 +1346,6 @@
       });
     </script>
     <script src="js/bg-video.js" defer></script>
+    <script src="js/site-features.js"></script>
   </body>
 </html>

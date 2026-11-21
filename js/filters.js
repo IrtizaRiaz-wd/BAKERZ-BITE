@@ -194,17 +194,21 @@
       const safeId = (p.id || '').replace(/['"]/g, '');
       const safeName = (p.name || '').replace(/</g, '&lt;').replace(/>/g, '&gt;');
       const safeDesc = (p.description || '').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+      const isMerch = p.category === 'merchandise';
+      const imgWrapStyle = isMerch
+        ? 'cursor: pointer; aspect-ratio: 1 / 1; border-radius: var(--radius-md) var(--radius-md) 0 0; background: #fff;'
+        : 'cursor: pointer; height: 210px; border-radius: var(--radius-md) var(--radius-md) 0 0; background: var(--bb-cream);';
       
       return `
         <div class="col-12 col-md-6 col-lg-4 mb-4">
-          <div class="product-card h-100 d-flex flex-column">
+          <div class="product-card ${isMerch ? 'merch-card' : ''} h-100 d-flex flex-column">
             <span class="product-badge-category">${p.badge || p.categoryName}</span>
             <button class="product-wishlist-btn" data-product-id="${safeId}" aria-label="Save ${safeName} to Wishlist" aria-pressed="false" onclick="BakerzWishlist.toggle('${safeId}')">
               <i class="bi bi-heart"></i>
             </button>
 
             <!-- Product Real Image with Branded Fallback -->
-            <div class="product-img-wrapper position-relative overflow-hidden" role="button" tabindex="0" aria-label="Quick view ${safeName}" onclick="BakerzFilters.openQuickView('${safeId}')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();BakerzFilters.openQuickView('${safeId}')}" style="cursor: pointer; height: 210px; border-radius: var(--radius-md) var(--radius-md) 0 0; background: var(--bb-cream);">
+            <div class="product-img-wrapper position-relative overflow-hidden" role="button" tabindex="0" aria-label="Quick view ${safeName}" onclick="BakerzFilters.openQuickView('${safeId}')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();BakerzFilters.openQuickView('${safeId}')}" style="${imgWrapStyle}">
               <img src="${p.imageAsset || ''}" 
                    alt="${safeName}" 
                    class="product-real-img w-100 h-100" 
@@ -219,6 +223,7 @@
             </div>
 
             <div class="product-card-body d-flex flex-column flex-grow-1">
+              ${isMerch ? `<div class="product-merch-meta"><span class="product-merch-cat">${p.merchCategoryName || 'Collection'}</span><span class="product-stock"><i class="bi bi-circle-fill"></i>${p.availability || 'In Stock'}</span></div>` : ''}
               <div class="product-rating">
                 <span>★ ${Number(p.rating || 5.0).toFixed(1)}</span>
                 <span class="review-count">(${p.reviewsCount || 40} demo reviews)</span>
@@ -255,6 +260,7 @@
       const safeDesc = (p.description || '').replace(/</g, '&lt;').replace(/>/g, '&gt;');
       const safeIngredients = (p.ingredients || 'Flour, butter, sugar, water, natural leavening.').replace(/</g, '&lt;').replace(/>/g, '&gt;');
       const safeAllergens = (p.allergens || 'None reported.').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+      const isMerch = p.category === 'merchandise';
       const related = (window.BakerzProducts || [])
         .filter(item => item.category === p.category && item.id !== p.id && !item.id.includes('showcase'))
         .slice(0, 3);
@@ -281,7 +287,7 @@
         <div class="row g-4 align-items-center">
           <div class="col-md-6">
             <!-- Product Real Image with Fallback -->
-            <div class="quick-view-img-wrapper position-relative overflow-hidden rounded-4 border" style="height: 320px; background: var(--bb-cream);">
+            <div class="quick-view-img-wrapper position-relative overflow-hidden rounded-4 border" style="${isMerch ? 'aspect-ratio: 1 / 1; height: auto; background: #fff;' : 'height: 320px; background: var(--bb-cream);'}">
               <img src="${p.imageAsset || ''}" 
                    alt="${safeName}" 
                    class="w-100 h-100" 
@@ -302,13 +308,13 @@
               <span class="text-muted small">(${p.reviewsCount || 40} demo tasting reviews)</span>
             </div>
             <h4 class="text-danger brand-font mb-2">Rs. ${Number(p.price || 0).toLocaleString()}</h4>
-            <div class="small text-success fw-bold mb-3"><i class="bi bi-check-circle-fill"></i> Available for demo ordering · Baked fresh in small batches</div>
+            <div class="small text-success fw-bold mb-3"><i class="bi bi-check-circle-fill"></i> ${isMerch ? `Available for delivery · ${p.availability || 'In Stock'}` : 'Available for demo ordering · Baked fresh in small batches'}</div>
             <p class="text-muted mb-3">${safeDesc}</p>
 
             <div class="mb-3 p-3 bg-light rounded-3 border">
-              <div class="small fw-bold text-dark mb-1"><i class="bi bi-info-circle"></i> Key Ingredients:</div>
+              <div class="small fw-bold text-dark mb-1"><i class="bi bi-info-circle"></i> ${isMerch ? 'Key Materials' : 'Key Ingredients'}:</div>
               <div class="small text-muted">${safeIngredients}</div>
-              <div class="small text-danger fw-bold mt-2"><i class="bi bi-exclamation-triangle"></i> Allergen Alert: ${safeAllergens}</div>
+              ${isMerch ? '' : `<div class="small text-danger fw-bold mt-2"><i class="bi bi-exclamation-triangle"></i> Allergen Alert: ${safeAllergens}</div>`}
             </div>
 
             <div class="d-flex flex-wrap align-items-center gap-3 mb-4">

@@ -1,0 +1,446 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Bakerz Bite Collection - Merchandise &amp; Gifts</title>
+    <meta name="description" content="The Bakerz Bite Collection: signature drinkware, canvas totes, gift bags and serving trays. Take a little sweetness home with you." />
+    <link rel="icon" type="image/png" href="assets/images/favicon.png" />
+    <link rel="shortcut icon" href="favicon.ico" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap 5 CSS & Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/pages.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/merchandise.css">
+    <link rel="stylesheet" href="css/site-features.css">
+  </head>
+  <body>
+
+    <!-- Reading Progress Bar -->
+    <div id="readingProgressBar"></div>
+
+    <!-- Announcement Bar -->
+    <div class="announcement-bar">
+      <div class="container-custom d-flex flex-wrap align-items-center justify-content-between gap-2">
+        <div class="ticker-item">
+          <span class="badge bg-danger text-white rounded-pill px-2 py-1 small">FRESH</span>
+          <span>Baking daily at our stone hearth. Free delivery on orders over Rs. 1,500! 🍓</span>
+        </div>
+        <div class="d-flex align-items-center gap-3">
+          <div class="announcement-meta-badge d-none d-md-inline-flex align-items-center gap-1">
+            <i class="bi bi-clock-history text-danger"></i>
+            <span class="dynamic-live-clock">Loading live clock...</span>
+          </div>
+          <div class="announcement-meta-badge d-inline-flex align-items-center gap-1">
+            <i class="bi bi-basket2-fill text-danger"></i>
+            <span>Fresh batches baked daily · Open 8:00 AM – 11:30 PM</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sticky Navigation Bar -->
+    <header class="bakerz-navbar">
+      <div class="container-custom d-flex align-items-center justify-content-between">
+        <a href="index.html" class="navbar-brand-logo" aria-label="Bakerz Bite Homepage">
+          <img src="assets/images/bakerz-bite-logo.webp" alt="Bakerz Bite Bakery Logo" height="52" />
+        </a>
+
+        <nav class="d-none d-xl-flex align-items-center gap-1 navbar-nav-desktop">
+          <a href="index.html" class="nav-link-bb">Home</a>
+          <!-- Explore Menu with Mega Dropdown -->
+          <div class="mega-menu-wrapper">
+            <a href="menu.html" class="nav-link-bb active d-flex align-items-center gap-1">
+              Explore Menu <i class="bi bi-chevron-down small"></i>
+            </a>
+            <div class="mega-dropdown-menu">
+              <div class="mega-grid">
+                <a href="menu.html?category=breads" class="mega-card bg-bread">
+                  <div class="mega-card-img position-relative overflow-hidden">
+                    <img loading="lazy" decoding="async" src="assets/images/categories/thumbs/category-breads.webp" alt="Breads & Loaves" onerror="this.style.display='none'; if (this.nextElementSibling) this.nextElementSibling.style.display='flex';" />
+                    <span style="display: none; width: 100%; height: 100%; align-items: center; justify-content: center; font-size: 1.8rem;">🍞</span>
+                  </div>
+                  <div class="mega-card-body">
+                    <h6 class="brand-font mb-1 text-dark">Breads & Loaves</h6>
+                    <p class="mb-0">Sourdough, rustic baguettes & wheat.</p>
+                  </div>
+                </a>
+                <a href="menu.html?category=cakes" class="mega-card bg-cake">
+                  <div class="mega-card-img position-relative overflow-hidden">
+                    <img loading="lazy" decoding="async" src="assets/images/categories/thumbs/category-cakes.webp" alt="Cakes & Gateaux" onerror="this.style.display='none'; if (this.nextElementSibling) this.nextElementSibling.style.display='flex';" />
+                    <span style="display: none; width: 100%; height: 100%; align-items: center; justify-content: center; font-size: 1.8rem;">🎂</span>
+                  </div>
+                  <div class="mega-card-body">
+                    <h6 class="brand-font mb-1 text-dark">Cakes & Gateaux</h6>
+                    <p class="mb-0">Fudge, fresh cream & celebration cakes.</p>
+                  </div>
+                </a>
+                <a href="menu.html?category=pastries" class="mega-card bg-pastry">
+                  <div class="mega-card-img position-relative overflow-hidden">
+                    <img loading="lazy" decoding="async" src="assets/images/categories/thumbs/category-pastries.webp" alt="Pastries & Sweets" onerror="this.style.display='none'; if (this.nextElementSibling) this.nextElementSibling.style.display='flex';" />
+                    <span style="display: none; width: 100%; height: 100%; align-items: center; justify-content: center; font-size: 1.8rem;">🥐</span>
+                  </div>
+                  <div class="mega-card-body">
+                    <h6 class="brand-font mb-1 text-dark">Pastries & Sweets</h6>
+                    <p class="mb-0">27-layer croissants, tarts & rolls.</p>
+                  </div>
+                </a>
+                <a href="menu.html?category=savory" class="mega-card bg-savory">
+                  <div class="mega-card-img position-relative overflow-hidden">
+                    <img loading="lazy" decoding="async" src="assets/images/categories/thumbs/category-savory.webp" alt="Savory & Snacks" onerror="this.style.display='none'; if (this.nextElementSibling) this.nextElementSibling.style.display='flex';" />
+                    <span style="display: none; width: 100%; height: 100%; align-items: center; justify-content: center; font-size: 1.8rem;">🥟</span>
+                  </div>
+                  <div class="mega-card-body">
+                    <h6 class="brand-font mb-1 text-dark">Savory & Snacks</h6>
+                    <p class="mb-0">Chicken patties, puffs & garlic twists.</p>
+                  </div>
+                </a>
+                <a href="menu.html?category=essentials" class="mega-card bg-essential">
+                  <div class="mega-card-img position-relative overflow-hidden">
+                    <img loading="lazy" decoding="async" src="assets/images/categories/thumbs/category-essentials.webp" alt="Everyday Essentials" onerror="this.style.display='none'; if (this.nextElementSibling) this.nextElementSibling.style.display='flex';" />
+                    <span style="display: none; width: 100%; height: 100%; align-items: center; justify-content: center; font-size: 1.8rem;">🧇</span>
+                  </div>
+                  <div class="mega-card-body">
+                    <h6 class="brand-font mb-1 text-dark">Everyday Essentials</h6>
+                    <p class="mb-0">Tea rusks, burger buns & dinner rolls.</p>
+                  </div>
+                </a>
+                <a href="menu.html" class="mega-card mega-card-highlight">
+                  <div class="mega-card-body">
+                    <div class="d-flex align-items-center gap-1 text-danger small fw-bold mb-1">
+                      <i class="bi bi-stars"></i>
+                      <span data-product-count>All 51 Baked Delights</span>
+                    </div>
+                    <h6 class="brand-font mb-1 text-dark">Full Artisan Menu</h6>
+                    <p class="mb-0 text-danger fw-semibold">Browse full catalog →</p>
+                  </div>
+                </a>
+              </div>
+              <div class="mt-3 pt-2 border-top d-flex justify-content-between align-items-center">
+                <span class="small text-muted"><i class="bi bi-clock-history me-1 text-danger"></i>Fresh stone hearth batches baked daily.</span>
+                <div class="d-flex flex-wrap gap-3">
+                  <a href="merchandise.html" class="small fw-bold text-danger text-decoration-none">The Collection →</a>
+                  <a href="menu.html" class="small fw-bold text-danger text-decoration-none">Explore All Items →</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <a href="about.html" class="nav-link-bb">About Us</a>
+          <a href="cake-studio.html" class="nav-link-bb">Cake Studio</a>
+          <a href="gallery.html" class="nav-link-bb">Gallery</a>
+          <a href="offers.html" class="nav-link-bb">Offers</a>
+          <a href="contact.html" class="nav-link-bb">Contact</a>
+        </nav>
+
+        <div class="d-flex align-items-center gap-2">
+          <button class="nav-action-btn" aria-label="Search" onclick="BakerzSearch.open()"><i class="bi bi-search"></i></button>
+          <a href="login.html" class="nav-action-btn" aria-label="Account"><i class="bi bi-person"></i></a>
+          <a href="dashboard.html#wishlist" class="nav-action-btn position-relative" aria-label="Wishlist">
+            <i class="bi bi-heart"></i>
+            <span class="badge-pill-count wishlist-count-badge" style="display: none;">0</span>
+          </a>
+          <button class="nav-action-btn position-relative cart-drawer-trigger" aria-label="Cart">
+            <i class="bi bi-basket3"></i>
+            <span class="badge-pill-count cart-count-badge" style="display: none;">0</span>
+          </button>
+          <a href="cart.html" class="btn btn-bb btn-bb-primary btn-bb-sm d-none d-sm-inline-flex">View Basket</a>
+          <button class="btn btn-bb btn-bb-outline btn-bb-sm d-xl-none ms-1" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileNavOffcanvas" aria-controls="mobileNavOffcanvas" aria-label="Toggle navigation"><i class="bi bi-list fs-5"></i></button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Mobile Offcanvas -->
+    <div class="offcanvas offcanvas-end mobile-nav-offcanvas" tabindex="-1" id="mobileNavOffcanvas">
+      <div class="mobile-nav-header d-flex justify-content-between align-items-center">
+        <img loading="lazy" decoding="async" src="assets/images/bakerz-bite-logo.webp" alt="Bakerz Bite" height="38" />
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close navigation"></button>
+      </div>
+      <div class="offcanvas-body p-3">
+        <div class="d-flex flex-column gap-1 mb-4">
+          <a href="index.html" class="mobile-nav-link"><span>Home</span> <i class="bi bi-house"></i></a>
+          <a href="menu.html" class="mobile-nav-link active"><span>Explore Menu</span> <i class="bi bi-grid"></i></a>
+          <a href="about.html" class="mobile-nav-link"><span>About Us</span> <i class="bi bi-heart"></i></a>
+          <a href="cake-studio.html" class="mobile-nav-link"><span>Cake Studio</span> <i class="bi bi-stars"></i></a>
+          <a href="gallery.html" class="mobile-nav-link"><span>Sweet Gallery</span> <i class="bi bi-images"></i></a>
+          <a href="offers.html" class="mobile-nav-link"><span>Offers & Bundles</span> <i class="bi bi-tag"></i></a>
+          <a href="contact.html" class="mobile-nav-link"><span>Contact Us</span> <i class="bi bi-envelope"></i></a>
+          <a href="dashboard.html" class="mobile-nav-link"><span>My Dashboard</span> <i class="bi bi-person-circle"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Page Header Banner: The Bakerz Bite Collection -->
+    <main>
+    <section class="bb-merch-hero py-5">
+      <div class="container-custom py-lg-4">
+        <div class="row align-items-center g-4 g-lg-5">
+          <div class="col-lg-6">
+            <span class="bb-merch-eyebrow"><i class="bi bi-stars"></i> Bakerz Bites Originals</span>
+            <h1 class="bb-merch-title display-4 mt-3 mb-2">The Bakerz Bite <span>Collection</span></h1>
+            <p class="bb-merch-lead mb-3">Take a little sweetness home with you.</p>
+            <p class="bb-merch-description mb-4">
+              A small, carefully curated line of bakery merchandise made for the people who love our counter as much as our cakes.
+              Soft pinks, honest materials, and our little wheat-sprig crest &mdash; designed to keep the bakery close long after the last bite.
+            </p>
+
+            <div class="bb-merch-stats mb-4">
+              <div class="bb-merch-stat"><strong data-merch-total>10</strong><span>Pieces</span></div>
+              <div class="bb-merch-stat"><strong>4</strong><span>Collections</span></div>
+              <div class="bb-merch-stat"><strong>100%</strong><span>Gift-ready</span></div>
+            </div>
+
+            <div class="d-flex flex-wrap gap-2 justify-content-center justify-content-lg-start">
+              <a href="#shop-collection" class="btn btn-bb btn-bb-primary"><i class="bi bi-bag-heart"></i> Shop the Collection</a>
+              <a href="menu.html" class="btn btn-bb btn-bb-outline"><i class="bi bi-grid"></i> Explore the Menu</a>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="bb-merch-hero-collage">
+              <div class="bb-merch-hero-tile">
+                <img src="assets/images/merchandise/bakerz-ceramic-mug.webp" alt="Bakerz Classic Ceramic Mug" width="800" height="800" fetchpriority="high" decoding="async" />
+              </div>
+              <div class="bb-merch-hero-tile">
+                <img src="assets/images/merchandise/bakerz-canvas-bag.webp" alt="Pink Canvas Tote Bag" width="800" height="800" loading="lazy" decoding="async" />
+              </div>
+              <div class="bb-merch-hero-tile">
+                <img src="assets/images/merchandise/bakerz-wooden-tray.webp" alt="Oak Wooden Serving Tray" width="800" height="800" loading="lazy" decoding="async" />
+              </div>
+              <div class="bb-merch-hero-tile">
+                <img src="assets/images/merchandise/bakerz-glass-tumbler.webp" alt="Bamboo Lid Glass Tumbler" width="800" height="800" loading="lazy" decoding="async" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Collection Catalog -->
+    <section class="py-5 bg-white" id="shop-collection">
+      <div class="container-custom">
+        <div class="text-center mb-4">
+          <span class="badge bg-danger text-white rounded-pill px-3 py-1 mb-2">SHOP THE LINE</span>
+          <h2 class="display-5 fw-bold brand-font mb-2">Made to Be Kept</h2>
+          <p class="text-muted" style="max-width: 660px; margin: 0 auto;">
+            Drinkware for slow mornings, totes for bread runs, and trays for the cakes you are proud to serve.
+            Every piece is part of our existing bakery basket, wishlist, and checkout.
+          </p>
+        </div>
+
+        <div class="clay-card bb-merch-toolbar p-4 mb-4">
+          <div class="row g-3 align-items-center">
+            <div class="col-md-6">
+              <div class="bb-search-row">
+                <button type="button" class="bb-search-icon" aria-label="Focus collection search" onclick="document.getElementById('merchSearchInput').focus()">
+                  <i class="bi bi-search"></i>
+                </button>
+                <input type="text" id="merchSearchInput" class="form-control form-control-bb" placeholder="Search mugs, totes, trays..." aria-label="Search The Bakerz Bite Collection">
+              </div>
+            </div>
+            <div class="col-md-6 d-flex gap-2 justify-content-md-end">
+              <select id="merchSortSelect" class="form-select form-select-bb" aria-label="Sort collection" style="max-width: 290px;">
+                <option value="featured">Featured first</option>
+                <option value="price-asc">Price: Low to High</option>
+                <option value="price-desc">Price: High to Low</option>
+                <option value="alpha-asc">Alphabetical (A - Z)</option>
+                <option value="rating-desc">Highest Rated</option>
+              </select>
+              <button id="merchResetBtn" class="btn btn-bb btn-bb-outline btn-bb-sm" type="button" title="Reset collection filters" aria-label="Reset collection filters">
+                <i class="bi bi-arrow-counterclockwise"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="catalog-pills d-flex flex-wrap gap-2 mt-3 pt-3 border-top justify-content-center justify-content-md-start" role="group" aria-label="Collection categories">
+            <button class="btn btn-bb btn-bb-outline btn-bb-sm active" data-merch-filter="all">All Pieces <span class="bb-merch-pill-count" data-merch-count="all">0</span></button>
+            <button class="btn btn-bb btn-bb-outline btn-bb-sm" data-merch-filter="drinkware">☕ Drinkware <span class="bb-merch-pill-count" data-merch-count="drinkware">0</span></button>
+            <button class="btn btn-bb btn-bb-outline btn-bb-sm" data-merch-filter="bags">👜 Bags &amp; Packaging <span class="bb-merch-pill-count" data-merch-count="bags">0</span></button>
+            <button class="btn btn-bb btn-bb-outline btn-bb-sm" data-merch-filter="serving">🍽️ Serving Accessories <span class="bb-merch-pill-count" data-merch-count="serving">0</span></button>
+            <button class="btn btn-bb btn-bb-outline btn-bb-sm" data-merch-filter="aprons">🎽 Aprons &amp; Apparel <span class="bb-merch-pill-count" data-merch-count="aprons">0</span></button>
+          </div>
+        </div>
+
+        <div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mb-4">
+          <span id="merchProductCount" class="text-muted small fw-bold">Loading the collection...</span>
+          <span class="small text-muted"><i class="bi bi-gift text-danger"></i> Gift-ready packaging on every order</span>
+        </div>
+
+        <div class="row g-4 product-grid" id="merchGrid" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <!-- Collection Perks -->
+    <section class="bb-merch-perks py-5">
+      <div class="container-custom">
+        <div class="text-center mb-5">
+          <span class="badge bg-white text-danger rounded-pill px-3 py-1 mb-2 border">WHY YOU WILL LOVE IT</span>
+          <h2 class="display-6 fw-bold brand-font mb-2">Bakery Pieces, Thoughtfully Made</h2>
+          <p class="text-muted">The same care we put into our bakes, carried into everything you take home.</p>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-3">
+            <div class="bb-merch-perk">
+              <div class="bb-merch-perk-icon"><i class="bi bi-cup-hot"></i></div>
+              <h5>Food-Safe Materials</h5>
+              <p>Lead-free glazes, food-grade ceramics, and finishes chosen for daily use.</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="bb-merch-perk">
+              <div class="bb-merch-perk-icon"><i class="bi bi-gift"></i></div>
+              <h5>Gift-Ready</h5>
+              <p>Every piece arrives ready to give, with our signature blush packaging.</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="bb-merch-perk">
+              <div class="bb-merch-perk-icon"><i class="bi bi-truck"></i></div>
+              <h5>Local Delivery</h5>
+              <p>Same-day delivery across Karachi on the same free-shipping terms as our bakes.</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="bb-merch-perk">
+              <div class="bb-merch-perk-icon"><i class="bi bi-stars"></i></div>
+              <h5>Small-Batch Brand Pieces</h5>
+              <p>A tight, seasonal line &mdash; not a warehouse of generic goods.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Closing Note -->
+    <section class="py-5 bg-white">
+      <div class="container-custom">
+        <div class="bb-merch-note">
+          <span class="badge bg-white text-danger rounded-pill px-3 py-1 mb-3">A SWEET FINISH</span>
+          <h3 class="display-6 fw-bold mb-2">Every piece tells our story.</h3>
+          <p class="mb-4">
+            Pair a mug with a box of cookies, tuck a gift bag beside a celebration cake, or treat yourself to the tray you have been eyeing.
+            The collection lives right beside the oven &mdash; and right inside your basket.
+          </p>
+          <div class="d-flex flex-wrap justify-content-center gap-2">
+            <a href="menu.html?category=merchandise" class="btn btn-bb btn-bb-primary"><i class="bi bi-basket3-fill"></i> See Them in the Menu</a>
+            <a href="contact.html" class="btn btn-bb btn-bb-outline"><i class="bi bi-envelope"></i> Ask About Gifting</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bakerz-footer">
+      <div class="container-custom">
+        <div class="row g-4 mb-5">
+          <div class="col-lg-4 col-md-6">
+            <a href="index.html" class="d-inline-block mb-3">
+              <img loading="lazy" decoding="async" src="assets/images/bakerz-bite-logo.webp" alt="Bakerz Bite Logo" height="58" />
+            </a>
+            <p class="small text-white-50 mb-3">
+              Playful 3D clay aesthetic artisan bakery delivering happiness and warmth every day.
+            </p>
+          </div>
+          <div class="col-lg-2 col-md-6 col-6">
+            <h5 class="brand-font mb-3">Pages</h5>
+            <ul class="list-unstyled small d-flex flex-column gap-2 mb-0">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="menu.html">Explore Menu</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="gallery.html">Gallery</a></li>
+              <li><a href="offers.html">Offers</a></li>
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="reviews.html">Guest Reviews</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-md-6 col-6">
+            <h5 class="brand-font mb-3">Categories</h5>
+            <ul class="list-unstyled small d-flex flex-column gap-2 mb-0">
+              <li><a href="menu.html?category=breads">Breads & Loaves</a></li>
+              <li><a href="menu.html?category=cakes">Cakes & Gateaux</a></li>
+              <li><a href="menu.html?category=pastries">Pastries & Sweets</a></li>
+              <li><a href="menu.html?category=pies">Pies & Tarts</a></li>
+              <li><a href="menu.html?category=savory">Savory Items</a></li>
+              <li><a href="menu.html?category=essentials">Everyday Essentials</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <h5 class="brand-font mb-3">Flagship Location</h5>
+            <p class="small text-white-50 bakery-location-display mb-1">Main Boulevard, North Nazimabad, Karachi</p>
+            <p class="small text-white-50 bakery-phone-display mb-1">0302 2669408</p>
+            <p class="small text-white-50 bakery-hours-display mb-0">8:00 AM – 11:30 PM Daily</p>
+          </div>
+        </div>
+        <div class="pt-4 border-top border-secondary border-opacity-25 text-center text-white-50 small">
+          © 2026 Bakerz Bite Patisserie. All rights reserved.
+        </div>
+      </div>
+    </footer>
+
+    <!-- Cart Drawer & Quick View Modal -->
+    <div class="cart-drawer-overlay" id="cartDrawerOverlay"></div>
+    <div class="cart-drawer" id="cartDrawer">
+      <div class="cart-drawer-header">
+        <h5 class="brand-font mb-0"><i class="bi bi-basket3-fill text-danger me-2"></i>Your Sweet Basket</h5>
+        <button type="button" class="btn-close" id="cartDrawerCloseBtn" aria-label="Close basket"></button>
+      </div>
+      <div class="cart-drawer-body" id="cartDrawerItems"></div>
+      <div class="cart-drawer-footer" id="cartDrawerSummary"></div>
+    </div>
+
+    <div class="modal fade" id="quickViewModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content bb-modal-content">
+          <div class="modal-header bb-modal-header">
+            <h5 class="modal-title brand-font">Treat Details</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body bb-modal-body" id="quickViewModalBody"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Global Search Modal -->
+    <div class="modal fade" id="globalSearchModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content bb-modal-content">
+          <div class="modal-header bb-modal-header">
+            <h5 class="modal-title brand-font">Search Menu</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body bb-modal-body">
+            <div class="bb-search-row mb-3">
+              <button type="button" class="bb-search-icon" aria-label="Search" onclick="document.getElementById('globalSearchInput').focus()">
+                <i class="bi bi-search"></i>
+              </button>
+              <input type="text" id="globalSearchInput" class="form-control form-control-bb" aria-label="Search the bakery menu" placeholder="Search treats..." oninput="BakerzSearch.handleSearchInput(this.value)">
+            </div>
+            <div id="globalSearchResults"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/products.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/wishlist.js"></script>
+    <script src="js/filters.js"></script>
+    <script src="js/forms.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/merchandise.js"></script>
+    <script src="js/site-features.js"></script>
+  </body>
+</html>

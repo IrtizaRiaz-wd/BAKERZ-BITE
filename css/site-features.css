@@ -1,0 +1,278 @@
+/* ==========================================================================
+   Bakerz Bite — Shared live site features
+   Visitor badge, bottom information ticker, and location controls.
+   Loaded on every page after the core stylesheets.
+   ========================================================================== */
+
+:root {
+  --bb-ticker-h: 36px;
+}
+
+/* ---------- Visitor counter (near the logo) ---------- */
+.navbar-brand-logo {
+  position: relative;
+}
+
+.bb-visit-counter {
+  position: absolute;
+  left: 50%;
+  bottom: -13px;
+  transform: translateX(-50%);
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 1px 8px;
+  border-radius: 999px;
+  background: #fff;
+  border: 1px solid rgba(85, 58, 54, 0.14);
+  box-shadow: 0 2px 5px rgba(85, 58, 54, 0.08);
+  color: var(--bb-chocolate-muted);
+  font-size: 0.62rem;
+  font-weight: 800;
+  line-height: 1.45;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.bb-visit-counter i {
+  font-size: 0.62rem;
+  color: var(--bb-cherry-red);
+}
+
+.bb-visit-counter em {
+  font-style: normal;
+  font-weight: 700;
+  opacity: 0.78;
+}
+
+.bb-visit-count {
+  color: var(--bb-cherry-red);
+  font-size: 0.66rem;
+}
+
+/* ---------- Bottom live ticker ---------- */
+body.bb-has-ticker {
+  padding-bottom: var(--bb-ticker-h);
+}
+
+body.bb-has-ticker.bb-ticker-footer {
+  padding-bottom: 0;
+}
+
+body.bb-ticker-footer .bakerz-footer {
+  padding-bottom: calc(30px + var(--bb-ticker-h));
+}
+
+body.bb-has-ticker .toast-container-bb {
+  bottom: calc(24px + var(--bb-ticker-h));
+}
+
+.bb-live-ticker {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1025;
+  display: flex;
+  align-items: center;
+  height: var(--bb-ticker-h);
+  background: linear-gradient(90deg, #382421 0%, #4a302b 55%, #3d2724 100%);
+  border-top: 2px solid rgba(245, 166, 197, 0.45);
+  box-shadow: 0 -6px 18px rgba(56, 36, 33, 0.18);
+  color: #fdf3ed;
+  font-size: 0.8rem;
+  font-weight: 600;
+  overflow: hidden;
+}
+
+.bb-ticker-viewport {
+  flex: 1 1 auto;
+  min-width: 0;
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 14px, #000 calc(100% - 14px), transparent 100%);
+  mask-image: linear-gradient(90deg, transparent 0, #000 14px, #000 calc(100% - 14px), transparent 100%);
+}
+
+.bb-ticker-track {
+  display: flex;
+  width: max-content;
+  will-change: transform;
+  animation: bbTickerScroll 38s linear infinite;
+}
+
+.bb-ticker-viewport:hover .bb-ticker-track,
+.bb-ticker-viewport:focus-within .bb-ticker-track {
+  animation-play-state: paused;
+}
+
+.bb-ticker-group {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 0 18px;
+  white-space: nowrap;
+}
+
+.bb-ticker-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.bb-ticker-item i {
+  color: var(--bb-strawberry-pink);
+  font-size: 0.78rem;
+}
+
+.bb-ticker-dot {
+  color: rgba(255, 255, 255, 0.32);
+}
+
+.bb-ticker-brand {
+  color: var(--bb-butter-yellow);
+  font-weight: 700;
+}
+
+.bb-ticker-locate {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin: 0 10px;
+  padding: 3px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+  font-size: 0.72rem;
+  font-weight: 700;
+  line-height: 1.4;
+  transition: background 0.25s ease, border-color 0.25s ease;
+}
+
+.bb-ticker-locate:hover,
+.bb-ticker-locate:focus-visible {
+  background: rgba(245, 166, 197, 0.22);
+  border-color: rgba(245, 166, 197, 0.6);
+  color: #fff;
+  outline: none;
+}
+
+.bb-ticker-locate i {
+  color: var(--bb-butter-yellow);
+}
+
+.bb-ticker-locate-text {
+  max-width: 130px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@keyframes bbTickerScroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+/* ---------- Location modal ---------- */
+.bb-loc-modal {
+  border: none;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-clay-lg);
+}
+
+.bb-loc-modal .modal-header {
+  background: linear-gradient(135deg, var(--bb-strawberry-soft), var(--bb-butter-soft));
+  border-bottom: 1px dashed rgba(85, 58, 54, 0.14);
+}
+
+.bb-loc-status {
+  min-height: 1.5rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.bb-loc-status.is-error {
+  color: var(--bb-cherry-dark);
+}
+
+.bb-loc-status.is-success {
+  color: #2f7d4f;
+}
+
+.bb-loc-status.is-info {
+  color: var(--bb-chocolate-muted);
+}
+
+.bb-loc-detect.is-loading i {
+  animation: bbSpin 0.9s linear infinite;
+}
+
+@keyframes bbSpin {
+  to { transform: rotate(360deg); }
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 575.98px) {
+  :root {
+    --bb-ticker-h: 32px;
+  }
+
+  .bb-live-ticker {
+    font-size: 0.72rem;
+  }
+
+  .bb-ticker-group {
+    gap: 10px;
+    padding: 0 12px;
+  }
+
+  .bb-ticker-item i {
+    font-size: 0.7rem;
+  }
+
+  .bb-ticker-locate {
+    margin: 0 6px;
+    padding: 2px 8px;
+    font-size: 0.66rem;
+  }
+
+  .bb-ticker-locate-text {
+    max-width: 74px;
+  }
+
+  .bb-visit-counter {
+    bottom: -11px;
+    padding: 0 6px;
+    font-size: 0.55rem;
+  }
+
+  .bb-visit-counter em {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bb-ticker-track {
+    width: auto;
+    animation: none;
+    transform: none;
+  }
+
+  .bb-ticker-viewport {
+    overflow-x: auto;
+    -webkit-mask-image: none;
+    mask-image: none;
+  }
+
+  .bb-ticker-group[aria-hidden="true"] {
+    display: none;
+  }
+
+  .bb-loc-detect.is-loading i {
+    animation: none;
+  }
+}

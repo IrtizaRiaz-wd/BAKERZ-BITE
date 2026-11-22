@@ -3,6 +3,16 @@
  */
 
 (function () {
+  function isValidPhone(value) {
+    const raw = String(value || '').trim();
+    if (!raw || raw.length > 24) return false;
+    if (!/^\+?[0-9()\s.-]+$/.test(raw)) return false;
+    const digits = raw.replace(/\D/g, '');
+    if (digits.length < 10 || digits.length > 15) return false;
+    if (/^0+$/.test(digits)) return false;
+    return true;
+  }
+
   // Toast System
   window.BakerzToasts = {
     show: function (message, type = 'info', icon = '✨', options = {}) {
@@ -154,8 +164,10 @@
           return;
         }
 
-        if (!/^[0-9+()\s-]{7,20}$/.test(phone)) {
-          window.BakerzToasts.show('Please enter a valid phone number using digits, spaces, +, - or parentheses.', 'info', '📞');
+        if (!isValidPhone(phone)) {
+          window.BakerzToasts.show('Please enter a valid phone number (10–15 digits; use digits, spaces, +, -, or parentheses).', 'info', '📞');
+          const phoneInput = form.querySelector('[name="phone"]');
+          if (phoneInput) phoneInput.focus();
           return;
         }
 
